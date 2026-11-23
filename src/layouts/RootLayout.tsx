@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
+import { WhatsAppFloatingButton } from '@/components/ui/WhatsAppFloatingButton'
 
 export const RootLayout: React.FC = () => {
   const { pathname } = useLocation()
@@ -18,6 +19,7 @@ export const RootLayout: React.FC = () => {
         <Outlet />
       </main>
       <Footer />
+      <WhatsAppFloatingButton />
     </div>
   )
 }

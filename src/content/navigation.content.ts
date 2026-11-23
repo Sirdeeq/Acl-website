@@ -9,6 +9,7 @@ export const OFFICIAL_CONTACT_INFO = {
   websiteDomain: 'www.aairi.africa',
   whatsappNumber: '+2348033498179',
   whatsappUrl: 'https://wa.me/2348033498179?text=Hello%20Adesewa%20Concept%20Ltd,%20I%20would%20like%20to%20inquire%20about%20your%20services%20and%20programmes.',
+  whatsappGroupUrl: 'https://chat.whatsapp.com/invite/ADESWACONCEPT-AVC-COMMUNITY',
   headquarters: 'Ekiti State & Nationwide Network (19 States Coordinator Network), Nigeria',
 }
 

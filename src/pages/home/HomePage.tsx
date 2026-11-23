@@ -368,7 +368,7 @@ export const HomePage: React.FC = () => {
                 Flagship Programme
               </Badge>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white leading-tight">
-                Adesewa Agribusiness Investment Readiness Initiative (AAIRI)
+                African Agribusiness Investment Readiness and Recognition Initiative (AAIRI)
               </h2>
               <p className="text-base text-[#bbdecc] leading-relaxed">
                 {AAIRI_PROGRAMME.summary}
