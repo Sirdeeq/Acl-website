@@ -5,13 +5,13 @@ import { OFFICIAL_CONTACT_INFO } from '@/content/navigation.content'
 
 export const PrivacyPage: React.FC = () => {
   return (
-    <div className="py-12 sm:py-20">
+    <div className="py-12 sm:py-20 transition-colors duration-300">
       <Container size="narrow">
-        <header className="mb-10 pb-8 border-b border-[#e2e7e4] space-y-3">
+        <header className="mb-10 pb-8 border-b border-[#dce3df] dark:border-[#1d2923] space-y-3">
           <Badge variant="green" size="md">
             Data Protection & Privacy
           </Badge>
-          <h1 className="text-3xl sm:text-4xl font-serif font-bold text-[#245240]">
+          <h1 className="text-3xl sm:text-4xl font-serif font-bold text-[#245240] dark:text-white">
             Privacy Policy
           </h1>
           <p className="text-xs text-[#7bb173]">
@@ -19,9 +19,9 @@ export const PrivacyPage: React.FC = () => {
           </p>
         </header>
 
-        <div className="space-y-6 text-sm text-[#4a5751] leading-relaxed">
+        <div className="space-y-6 text-sm text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
           <section className="space-y-2">
-            <h2 className="text-lg font-serif font-bold text-[#245240]">
+            <h2 className="text-lg font-serif font-bold text-[#245240] dark:text-white">
               1. Introduction
             </h2>
             <p>
@@ -30,7 +30,7 @@ export const PrivacyPage: React.FC = () => {
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-lg font-serif font-bold text-[#245240]">
+            <h2 className="text-lg font-serif font-bold text-[#245240] dark:text-white">
               2. Information We Collect
             </h2>
             <p>
@@ -44,7 +44,7 @@ export const PrivacyPage: React.FC = () => {
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-lg font-serif font-bold text-[#245240]">
+            <h2 className="text-lg font-serif font-bold text-[#245240] dark:text-white">
               3. Purpose of Data Processing
             </h2>
             <p>
@@ -52,14 +52,14 @@ export const PrivacyPage: React.FC = () => {
             </p>
             <ul className="list-disc pl-5 space-y-1 text-xs">
               <li>Assess agribusiness readiness and match participants to relevant capacity-building bootcamps.</li>
-              <li>Coordinate regional interventions with our network of 18 Nigerian State Coordinators.</li>
+              <li>Coordinate regional interventions with our network of 19 Nigerian State Coordinators.</li>
               <li>Communicate vital updates regarding the AVC Learning Programme and AAIRI milestones.</li>
               <li>Respond to direct commercial, institutional, and partnership inquiries.</li>
             </ul>
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-lg font-serif font-bold text-[#245240]">
+            <h2 className="text-lg font-serif font-bold text-[#245240] dark:text-white">
               4. Confidentiality & Non-Disclosure
             </h2>
             <p>
@@ -68,12 +68,12 @@ export const PrivacyPage: React.FC = () => {
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-lg font-serif font-bold text-[#245240]">
+            <h2 className="text-lg font-serif font-bold text-[#245240] dark:text-white">
               5. Contact Our Privacy Lead
             </h2>
             <p>
               If you have inquiries regarding your data or wish to exercise data subject rights, please contact us at{' '}
-              <a href={`mailto:${OFFICIAL_CONTACT_INFO.primaryEmail}`} className="text-[#359540] font-semibold underline">
+              <a href={`mailto:${OFFICIAL_CONTACT_INFO.primaryEmail}`} className="text-[#359540] dark:text-[#4ade80] font-semibold underline">
                 {OFFICIAL_CONTACT_INFO.primaryEmail}
               </a>
               .

@@ -5,15 +5,15 @@ import { Button } from '@/components/ui/Button'
 
 export const NotFoundPage: React.FC = () => {
   return (
-    <div className="py-24 sm:py-36 text-center">
+    <div className="py-24 sm:py-36 text-center transition-colors duration-300">
       <Container size="narrow">
-        <span className="text-6xl sm:text-7xl font-serif font-bold text-[#359540] block mb-4">
+        <span className="text-6xl sm:text-7xl font-serif font-bold text-[#359540] dark:text-[#4ade80] block mb-4">
           404
         </span>
-        <h1 className="text-3xl sm:text-4xl font-serif font-bold text-[#245240] mb-4">
+        <h1 className="text-3xl sm:text-4xl font-serif font-bold text-[#245240] dark:text-white mb-4">
           Page Not Found
         </h1>
-        <p className="text-base text-[#4a5751] max-w-md mx-auto mb-8 leading-relaxed">
+        <p className="text-base text-[#4a5751] dark:text-[#a8b8b0] max-w-md mx-auto mb-8 leading-relaxed">
           The requested page could not be located. It may have moved or the link may have expired.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">

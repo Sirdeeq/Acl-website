@@ -97,11 +97,11 @@ export const AAIRI_PROGRAMME = {
 export const AVC_COMMUNITY = {
   name: 'AVC Community',
   fullName: 'Agribusiness and Value Chain Community',
-  tagline: 'Connecting over 2,000 Agribusiness Owners Across 18 Nigerian States and Global Markets',
+  tagline: 'Connecting over 2,000 Agribusiness Owners Across 19 Nigerian States and Global Markets',
   summary:
     'The Agribusiness and Value Chain (AVC) Community is ACL’s ongoing platform for agribusiness owner engagement, learning and opportunity sharing. It provides a continuing relationship beyond individual events, helping ACL understand members’ needs and connect them with relevant services, expertise and opportunities.',
   memberCount: '2,000+',
-  stateCoverage: '18 States',
+  stateCoverage: '19 States',
   summitYear: '2025',
   imageSrc: '/images/community/avc-community-field.jpg',
   pillars: [
@@ -126,7 +126,7 @@ export const AVC_COMMUNITY = {
     {
       title: 'State-Based Network Leadership',
       description:
-        'On-the-ground state coordinator representation across 18 Nigerian states ensuring grassroots mobilization, rapid feedback loops, and localized intervention delivery.',
+        'On-the-ground state coordinator representation across 19 Nigerian states ensuring grassroots mobilization, rapid feedback loops, and localized intervention delivery.',
       icon: 'MapPin',
     },
   ],
@@ -139,7 +139,7 @@ export const AVC_COMMUNITY = {
     {
       title: 'State-Based Capacity Building & Financial Partnerships',
       detail:
-        'Coordinated capacity building across the 18 states represented in our network. A proposed partnership with the Development Bank of Nigeria seeks financial sponsorship and technical support for community-focused training. (This remains a prospective partnership).',
+        'Coordinated capacity building across the 19 states represented in our network. A proposed partnership with the Development Bank of Nigeria seeks financial sponsorship and technical support for community-focused training. (This remains a prospective partnership).',
     },
     {
       title: 'Structured Membership Pathways',

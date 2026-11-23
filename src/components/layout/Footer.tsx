@@ -76,15 +76,9 @@ export const Footer: React.FC = () => {
 
                 <div className="flex items-center gap-3">
                   <Mail className="w-4 h-4 text-[#7bb173] shrink-0" />
-                  <div className="flex flex-wrap gap-x-3">
-                    <a href={`mailto:${OFFICIAL_CONTACT_INFO.primaryEmail}`} className="hover:text-white transition-colors">
-                      {OFFICIAL_CONTACT_INFO.primaryEmail}
-                    </a>
-                    <span>•</span>
-                    <a href={`mailto:${OFFICIAL_CONTACT_INFO.secondaryEmail}`} className="hover:text-white transition-colors">
-                      {OFFICIAL_CONTACT_INFO.secondaryEmail}
-                    </a>
-                  </div>
+                  <a href={`mailto:${OFFICIAL_CONTACT_INFO.primaryEmail}`} className="hover:text-white transition-colors">
+                    {OFFICIAL_CONTACT_INFO.primaryEmail}
+                  </a>
                 </div>
 
                 <div className="flex items-center gap-3">
@@ -96,7 +90,7 @@ export const Footer: React.FC = () => {
               {/* Verified Community Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 text-xs text-[#bbdecc]">
                 <ShieldCheck className="w-4 h-4 text-[#7bb173]" />
-                <span>AVC Community: 2,000+ Members across 18 Nigerian States</span>
+                <span>AVC Community: 2,000+ Members across 19 Nigerian States</span>
               </div>
             </div>
 

@@ -10,7 +10,7 @@ export const COMPANY_PROFILE = {
   ecosystemRole:
     'ACL serves as a Farm Programme Manager and ecosystem connector, bridging the gaps between the needs of farmers and agribusiness enterprises and the resources available across the agricultural ecosystem. Its approach brings together enterprise development, capacity building, business profiling, digital tools and stakeholder collaboration.',
   communityOverview:
-    'With a community of more than 2,000 agribusiness owners and state coordinator representation across 18 Nigerian states, ACL is building a platform for inclusive agribusiness growth, stronger food systems and increased trade within Africa.',
+    'With a community of more than 2,000 agribusiness owners and state coordinator representation across 19 Nigerian states, ACL is building a platform for inclusive agribusiness growth, stronger food systems and increased trade within Africa.',
   purpose:
     'To help agribusiness owners translate their potential into sustainable enterprises by connecting them with the knowledge, operational support, capital, relationships and opportunities needed to grow.',
   vision:

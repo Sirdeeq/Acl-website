@@ -34,13 +34,13 @@ export const AairiEnquiryModal: React.FC<AairiEnquiryModalProps> = ({ isOpen, on
     >
       {submitted ? (
         <div className="text-center py-6">
-          <div className="w-14 h-14 bg-[#359540]/15 text-[#359540] rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-14 h-14 bg-[#359540]/15 dark:bg-[#359540]/25 text-[#359540] dark:text-[#4ade80] rounded-full flex items-center justify-center mx-auto mb-4">
             <CheckCircle2 className="w-7 h-7" />
           </div>
-          <h4 className="text-xl font-serif font-bold text-[#245240] mb-2">
+          <h4 className="text-xl font-serif font-bold text-[#245240] dark:text-white mb-2">
             Expression of Interest Logged
           </h4>
-          <p className="text-sm text-[#4a5751] mb-6 max-w-sm mx-auto">
+          <p className="text-sm text-[#4a5751] dark:text-[#bbdecc] mb-6 max-w-sm mx-auto">
             Thank you for registering your interest in AAIRI. Our programme management office will communicate updates regarding profiling schedules and confirmed bootcamp arrangements.
           </p>
           <Button onClick={onClose} variant="primary" size="sm">
@@ -49,81 +49,81 @@ export const AairiEnquiryModal: React.FC<AairiEnquiryModalProps> = ({ isOpen, on
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="p-3.5 rounded-xl bg-[#f0f7f2] border border-[#bbdecc]/40 text-xs text-[#245240] leading-relaxed">
+          <div className="p-3.5 rounded-xl bg-[#e8f3ed] dark:bg-[#16271e] border border-[#bbdecc]/60 dark:border-[#274434] text-xs text-[#245240] dark:text-[#bbdecc] leading-relaxed">
             * Note: Programme dates, locations, and bootcamp logistics for the proposed 400-participant cohort remain subject to confirmation. Submitting this form expresses interest only.
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-[#245240] mb-1">
+            <label className="block text-xs font-semibold text-[#245240] dark:text-[#7bb173] mb-1">
               Contact Full Name
             </label>
             <input
               required
               type="text"
               placeholder="e.g. Samuel Adekunle"
-              className="w-full px-3.5 py-2.5 rounded-xl border border-[#e2e7e4] text-sm focus:border-[#359540] focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-[#dce3df] dark:border-[#24362c] bg-[#f8faf8] dark:bg-[#101713] text-[#141716] dark:text-white placeholder-[#93a29b] dark:placeholder-[#5c7066] text-sm focus:border-[#359540] dark:focus:border-[#4ade80] focus:outline-none"
             />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <label className="block text-xs font-semibold text-[#245240] mb-1">
+              <label className="block text-xs font-semibold text-[#245240] dark:text-[#7bb173] mb-1">
                 Agribusiness / Farm Name
               </label>
               <input
                 required
                 type="text"
                 placeholder="e.g. Apex Agri Solutions"
-                className="w-full px-3.5 py-2.5 rounded-xl border border-[#e2e7e4] text-sm focus:border-[#359540] focus:outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-[#dce3df] dark:border-[#24362c] bg-[#f8faf8] dark:bg-[#101713] text-[#141716] dark:text-white placeholder-[#93a29b] dark:placeholder-[#5c7066] text-sm focus:border-[#359540] dark:focus:border-[#4ade80] focus:outline-none"
               />
             </div>
             <div>
-              <label className="block text-xs font-semibold text-[#245240] mb-1">
+              <label className="block text-xs font-semibold text-[#245240] dark:text-[#7bb173] mb-1">
                 Value Chain Focus
               </label>
               <input
                 required
                 type="text"
                 placeholder="e.g. Rice, Poultry, Cassava, Horticulture"
-                className="w-full px-3.5 py-2.5 rounded-xl border border-[#e2e7e4] text-sm focus:border-[#359540] focus:outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-[#dce3df] dark:border-[#24362c] bg-[#f8faf8] dark:bg-[#101713] text-[#141716] dark:text-white placeholder-[#93a29b] dark:placeholder-[#5c7066] text-sm focus:border-[#359540] dark:focus:border-[#4ade80] focus:outline-none"
               />
             </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <label className="block text-xs font-semibold text-[#245240] mb-1">
+              <label className="block text-xs font-semibold text-[#245240] dark:text-[#7bb173] mb-1">
                 Email Address
               </label>
               <input
                 required
                 type="email"
                 placeholder="samuel@apexagri.ng"
-                className="w-full px-3.5 py-2.5 rounded-xl border border-[#e2e7e4] text-sm focus:border-[#359540] focus:outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-[#dce3df] dark:border-[#24362c] bg-[#f8faf8] dark:bg-[#101713] text-[#141716] dark:text-white placeholder-[#93a29b] dark:placeholder-[#5c7066] text-sm focus:border-[#359540] dark:focus:border-[#4ade80] focus:outline-none"
               />
             </div>
             <div>
-              <label className="block text-xs font-semibold text-[#245240] mb-1">
+              <label className="block text-xs font-semibold text-[#245240] dark:text-[#7bb173] mb-1">
                 Phone / WhatsApp Number
               </label>
               <input
                 required
                 type="tel"
                 placeholder="+234 803 000 0000"
-                className="w-full px-3.5 py-2.5 rounded-xl border border-[#e2e7e4] text-sm focus:border-[#359540] focus:outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-[#dce3df] dark:border-[#24362c] bg-[#f8faf8] dark:bg-[#101713] text-[#141716] dark:text-white placeholder-[#93a29b] dark:placeholder-[#5c7066] text-sm focus:border-[#359540] dark:focus:border-[#4ade80] focus:outline-none"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-[#245240] mb-1">
+            <label className="block text-xs font-semibold text-[#245240] dark:text-[#7bb173] mb-1">
               State / Operating Location
             </label>
             <input
               required
               type="text"
               placeholder="e.g. Ekiti, Ondo, Oyo, Kaduna, etc."
-              className="w-full px-3.5 py-2.5 rounded-xl border border-[#e2e7e4] text-sm focus:border-[#359540] focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-[#dce3df] dark:border-[#24362c] bg-[#f8faf8] dark:bg-[#101713] text-[#141716] dark:text-white placeholder-[#93a29b] dark:placeholder-[#5c7066] text-sm focus:border-[#359540] dark:focus:border-[#4ade80] focus:outline-none"
             />
           </div>
 

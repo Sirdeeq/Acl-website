@@ -28,17 +28,17 @@ export const Button: React.FC<ButtonProps> = ({
 
   const variantClasses = {
     primary:
-      'bg-[#359540] text-white hover:bg-[#2d8036] focus-visible:ring-[#359540] shadow-sm hover:shadow-md',
+      'bg-[#359540] text-white hover:bg-[#2d8036] focus-visible:ring-[#359540] shadow-sm hover:shadow-md dark:bg-[#359540] dark:hover:bg-[#3ea84b]',
     secondary:
-      'bg-[#245240] text-white hover:bg-[#1a3d30] focus-visible:ring-[#245240] shadow-sm hover:shadow-md',
+      'bg-[#245240] text-white hover:bg-[#1a3d30] focus-visible:ring-[#245240] shadow-sm hover:shadow-md dark:bg-[#1f4a39] dark:hover:bg-[#275d47]',
     outline:
-      'border border-[#245240] text-[#245240] hover:bg-[#245240] hover:text-white focus-visible:ring-[#245240]',
+      'border border-[#245240] text-[#245240] hover:bg-[#245240] hover:text-white focus-visible:ring-[#245240] dark:border-[#7bb173] dark:text-[#7bb173] dark:hover:bg-[#7bb173] dark:hover:text-[#0e1411]',
     ghost:
-      'text-[#245240] hover:bg-[#f0f7f2] focus-visible:ring-[#245240]',
+      'text-[#245240] hover:bg-[#f0f7f2] focus-visible:ring-[#245240] dark:text-[#bbdecc] dark:hover:bg-[#18261f]',
     dark:
-      'bg-[#141716] text-white hover:bg-[#232927] focus-visible:ring-[#141716]',
+      'bg-[#141716] text-white hover:bg-[#232927] focus-visible:ring-[#141716] dark:bg-[#1c2720] dark:hover:bg-[#24332a]',
     white:
-      'bg-white text-[#245240] hover:bg-[#f5f9f6] focus-visible:ring-white shadow-sm hover:shadow-md font-semibold',
+      'bg-white text-[#245240] hover:bg-[#f5f9f6] focus-visible:ring-white shadow-sm hover:shadow-md font-semibold dark:bg-[#18261f] dark:text-white dark:hover:bg-[#21352a] dark:border dark:border-[#274434]',
   }
 
   const sizeClasses = {

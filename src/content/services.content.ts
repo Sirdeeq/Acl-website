@@ -162,7 +162,7 @@ export const SERVICES_LIST: ServiceItem[] = [
     ],
     keyDeliverables: [
       'Multi-stakeholder programme design, scoping, and governance',
-      'Grassroots mobilization leveraging our 18-state network',
+      'Grassroots mobilization leveraging our 19-state network',
       'Programme monitoring, evaluation, and impact documentation',
       'Sponsorship frameworks and co-funding structures',
       'Policy advocacy and public-private dialogue platforms',

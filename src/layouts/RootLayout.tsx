@@ -12,7 +12,7 @@ export const RootLayout: React.FC = () => {
   }, [pathname])
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-[#141716] antialiased selection:bg-[#359540]/20 selection:text-[#245240]">
+    <div className="min-h-screen flex flex-col bg-[#f0f3f1] dark:bg-[#0e1411] text-[#141716] dark:text-[#e4ebe7] transition-colors duration-300 selection:bg-[#359540]/20 selection:text-[#245240] dark:selection:text-[#7bb173]">
       <Navbar />
       <main className="flex-1">
         <Outlet />

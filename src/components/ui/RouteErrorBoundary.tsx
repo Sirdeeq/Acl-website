@@ -20,16 +20,16 @@ export const RouteErrorBoundary: React.FC = () => {
   return (
     <div className="min-h-[60vh] flex items-center justify-center py-16 px-4">
       <Container size="narrow">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-[#e2e7e4] shadow-md text-center space-y-5">
-          <div className="w-14 h-14 rounded-full bg-[#f0f7f2] text-[#359540] flex items-center justify-center mx-auto">
+        <div className="bg-white dark:bg-[#141d18] rounded-3xl p-8 sm:p-12 border border-[#dce3df] dark:border-[#22332b] shadow-md text-center space-y-5 transition-colors">
+          <div className="w-14 h-14 rounded-full bg-[#e8f3ed] dark:bg-[#18261f] text-[#359540] dark:text-[#4ade80] flex items-center justify-center mx-auto">
             <AlertCircle className="w-7 h-7" />
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#245240]">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#245240] dark:text-white">
             {errorTitle}
           </h2>
 
-          <p className="text-sm text-[#4a5751] max-w-md mx-auto leading-relaxed">
+          <p className="text-sm text-[#4a5751] dark:text-[#a8b8b0] max-w-md mx-auto leading-relaxed">
             {errorMessage}
           </p>
 

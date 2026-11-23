@@ -28,7 +28,7 @@ import { NIGERIAN_STATES_NETWORK, INTERNATIONAL_REACH_COUNTRIES } from '@/data/s
 import { AairiEnquiryModal } from '@/features/programmes/AairiEnquiryModal'
 
 const renderServiceIcon = (name: string) => {
-  const className = "w-5 h-5 text-[#359540]"
+  const className = "w-5 h-5 text-[#359540] dark:text-[#4ade80]"
   switch (name) {
     case 'Tractor': return <Tractor className={className} />
     case 'GraduationCap': return <GraduationCap className={className} />
@@ -44,28 +44,28 @@ export const HomePage: React.FC = () => {
   const [aairiModalOpen, setAairiModalOpen] = useState(false)
 
   return (
-    <div className="relative overflow-hidden">
-      {/* 1. HERO SECTION WITH RICH PHOTOGRAPHY */}
-      <section className="relative pt-12 pb-20 sm:pt-20 sm:pb-32 bg-gradient-to-b from-[#f0f7f2]/60 via-[#fcfcfb] to-white border-b border-[#e2e7e4]/60">
+    <div className="relative overflow-hidden transition-colors duration-300">
+      {/* 1. HERO SECTION WITH SOPHISTICATED GREY CANVAS */}
+      <section className="relative pt-12 pb-20 sm:pt-20 sm:pb-32 bg-gradient-to-b from-[#e8eeea] via-[#f0f3f1] to-[#e8eeea] dark:from-[#0e1411] dark:via-[#121a16] dark:to-[#0e1411] border-b border-[#dce3df] dark:border-[#1d2923] transition-colors duration-300">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Column: Editorial Headline & Actions */}
             <div className="lg:col-span-7 space-y-6 sm:space-y-8">
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#f0f7f2] border border-[#bbdecc]/60 shadow-xs">
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/80 dark:bg-[#18261f] border border-[#bbdecc]/70 dark:border-[#274434] shadow-xs">
                 <span className="w-2 h-2 rounded-full bg-[#359540] animate-ping" />
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#245240]">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#245240] dark:text-[#7bb173]">
                   Strategic Agribusiness Advisory & Programme Management
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#245240] leading-[1.1] tracking-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#245240] dark:text-white leading-[1.1] tracking-tight">
                 Building Stronger Agribusinesses.{' '}
-                <span className="text-[#359540] italic block sm:inline">
+                <span className="text-[#359540] dark:text-[#4ade80] italic block sm:inline">
                   Connecting Africa to Opportunity.
                 </span>
               </h1>
 
-              <p className="text-base sm:text-lg text-[#4a5751] leading-relaxed max-w-2xl">
+              <p className="text-base sm:text-lg text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed max-w-2xl">
                 Adesewa Concept Ltd (ACL) provides strategic and operational management support to agribusiness owners—bridging the critical gap to capability, capital, markets, and sustainable partnerships.
               </p>
 
@@ -83,13 +83,14 @@ export const HomePage: React.FC = () => {
                   href="/contact"
                   variant="outline"
                   size="lg"
+                  className="dark:border-[#7bb173] dark:text-[#7bb173] dark:hover:bg-[#7bb173] dark:hover:text-[#0e1411]"
                 >
                   Partner With Us
                 </Button>
               </div>
 
               {/* Proof badges list */}
-              <div className="pt-4 border-t border-[#e2e7e4] grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs text-[#245240]">
+              <div className="pt-4 border-t border-[#dce3df] dark:border-[#1d2923] grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs text-[#245240] dark:text-[#bbdecc]">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#359540] shrink-0" />
                   <span className="font-medium">Farm Programme Manager</span>
@@ -100,20 +101,20 @@ export const HomePage: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2 col-span-2 sm:col-span-1">
                   <CheckCircle2 className="w-4 h-4 text-[#359540] shrink-0" />
-                  <span className="font-medium">18-State Coordinator Reach</span>
+                  <span className="font-medium">19-State Coordinator Reach</span>
                 </div>
               </div>
             </div>
 
             {/* Right Column: Hero Photographic Composition with Floating Badge */}
             <div className="lg:col-span-5 relative">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-4/3 sm:aspect-square">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-[#22332b] aspect-4/3 sm:aspect-square">
                 <img
                   src="/images/hero/hero-agritech.jpg"
                   alt="Modern African agribusiness management and agronomy"
                   className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#141716]/80 via-transparent to-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#141716]/90 via-transparent to-black/20" />
 
                 {/* Overlay Text Content */}
                 <div className="absolute bottom-0 inset-x-0 p-6 text-white space-y-2">
@@ -126,30 +127,30 @@ export const HomePage: React.FC = () => {
                     Bridging Farmers to Capital, Technology & Trade
                   </h3>
                   <p className="text-xs text-[#bbdecc] line-clamp-2">
-                    Operational gap diagnostics, inventory digitization, and bankable governance across 18 Nigerian states.
+                    Operational gap diagnostics, inventory digitization, and bankable governance across 19 Nigerian states.
                   </p>
                 </div>
               </div>
 
               {/* Floating Stat Pill Top Left */}
-              <div className="absolute -top-5 -left-5 bg-white rounded-2xl p-4 shadow-xl border border-[#e2e7e4] hidden sm:flex items-center gap-3 z-10">
-                <div className="w-10 h-10 rounded-xl bg-[#f0f7f2] flex items-center justify-center text-[#359540]">
+              <div className="absolute -top-5 -left-5 bg-white dark:bg-[#16211c] rounded-2xl p-4 shadow-xl border border-[#dce3df] dark:border-[#25362d] hidden sm:flex items-center gap-3 z-10 transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-[#e8f1ec] dark:bg-[#1a2d23] flex items-center justify-center text-[#359540]">
                   <Users className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-sm font-bold text-[#245240] block">2,000+ Members</span>
-                  <span className="text-[11px] text-[#4a5751]">Active AVC Community</span>
+                  <span className="text-sm font-bold text-[#245240] dark:text-[#7bb173] block">2,000+ Members</span>
+                  <span className="text-[11px] text-[#4a5751] dark:text-[#94a89e]">Active AVC Community</span>
                 </div>
               </div>
 
               {/* Floating Stat Pill Bottom Right */}
-              <div className="absolute -bottom-5 -right-5 bg-white rounded-2xl p-4 shadow-xl border border-[#e2e7e4] hidden sm:flex items-center gap-3 z-10">
-                <div className="w-10 h-10 rounded-xl bg-[#f0f7f2] flex items-center justify-center text-[#359540]">
+              <div className="absolute -bottom-5 -right-5 bg-white dark:bg-[#16211c] rounded-2xl p-4 shadow-xl border border-[#dce3df] dark:border-[#25362d] hidden sm:flex items-center gap-3 z-10 transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-[#e8f1ec] dark:bg-[#1a2d23] flex items-center justify-center text-[#359540]">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-sm font-bold text-[#245240] block">18 Nigerian States</span>
-                  <span className="text-[11px] text-[#4a5751]">State Coordinators</span>
+                  <span className="text-sm font-bold text-[#245240] dark:text-[#7bb173] block">19 Nigerian States</span>
+                  <span className="text-[11px] text-[#4a5751] dark:text-[#94a89e]">State Coordinators</span>
                 </div>
               </div>
             </div>
@@ -158,80 +159,80 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* 2. CREDIBILITY & PROOF INDICATORS BAR */}
-      <section className="py-12 bg-white border-b border-[#e2e7e4]">
+      <section className="py-12 bg-[#e8ecea] dark:bg-[#101713] border-b border-[#dce3df] dark:border-[#1d2923] transition-colors duration-300">
         <Container>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            <div className="p-6 rounded-2xl bg-[#fcfcfb] border border-[#e2e7e4]/80">
+            <div className="p-6 rounded-2xl bg-white dark:bg-[#141d18] border border-[#dce3df] dark:border-[#22332b] shadow-xs">
               <div className="flex items-center gap-3 mb-2">
-                <div className="p-2.5 rounded-xl bg-[#f0f7f2] text-[#245240]">
+                <div className="p-2.5 rounded-xl bg-[#e8f1ec] dark:bg-[#1c2c23] text-[#245240] dark:text-[#7bb173]">
                   <Users className="w-5 h-5" />
                 </div>
-                <span className="text-3xl font-serif font-bold text-[#245240]">2,000+</span>
+                <span className="text-3xl font-serif font-bold text-[#245240] dark:text-white">2,000+</span>
               </div>
-              <h4 className="text-sm font-semibold text-[#141716]">Agribusiness Owners</h4>
-              <p className="text-xs text-[#4a5751] mt-1">Active AVC Community members.</p>
+              <h4 className="text-sm font-semibold text-[#141716] dark:text-[#e4ebe7]">Agribusiness Owners</h4>
+              <p className="text-xs text-[#4a5751] dark:text-[#94a89e] mt-1">Active AVC Community members.</p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#fcfcfb] border border-[#e2e7e4]/80">
+            <div className="p-6 rounded-2xl bg-white dark:bg-[#141d18] border border-[#dce3df] dark:border-[#22332b] shadow-xs">
               <div className="flex items-center gap-3 mb-2">
-                <div className="p-2.5 rounded-xl bg-[#f0f7f2] text-[#245240]">
+                <div className="p-2.5 rounded-xl bg-[#e8f1ec] dark:bg-[#1c2c23] text-[#245240] dark:text-[#7bb173]">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <span className="text-3xl font-serif font-bold text-[#245240]">18</span>
+                <span className="text-3xl font-serif font-bold text-[#245240] dark:text-white">18</span>
               </div>
-              <h4 className="text-sm font-semibold text-[#141716]">Nigerian States</h4>
-              <p className="text-xs text-[#4a5751] mt-1">Dedicated State Coordinator network.</p>
+              <h4 className="text-sm font-semibold text-[#141716] dark:text-[#e4ebe7]">Nigerian States</h4>
+              <p className="text-xs text-[#4a5751] dark:text-[#94a89e] mt-1">Dedicated State Coordinator network.</p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#fcfcfb] border border-[#e2e7e4]/80">
+            <div className="p-6 rounded-2xl bg-white dark:bg-[#141d18] border border-[#dce3df] dark:border-[#22332b] shadow-xs">
               <div className="flex items-center gap-3 mb-2">
-                <div className="p-2.5 rounded-xl bg-[#f0f7f2] text-[#245240]">
+                <div className="p-2.5 rounded-xl bg-[#e8f1ec] dark:bg-[#1c2c23] text-[#245240] dark:text-[#7bb173]">
                   <Layers className="w-5 h-5" />
                 </div>
-                <span className="text-3xl font-serif font-bold text-[#245240]">6</span>
+                <span className="text-3xl font-serif font-bold text-[#245240] dark:text-white">6</span>
               </div>
-              <h4 className="text-sm font-semibold text-[#141716]">Core Service Areas</h4>
-              <p className="text-xs text-[#4a5751] mt-1">End-to-end management support.</p>
+              <h4 className="text-sm font-semibold text-[#141716] dark:text-[#e4ebe7]">Core Service Areas</h4>
+              <p className="text-xs text-[#4a5751] dark:text-[#94a89e] mt-1">End-to-end management support.</p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#fcfcfb] border border-[#e2e7e4]/80">
+            <div className="p-6 rounded-2xl bg-white dark:bg-[#141d18] border border-[#dce3df] dark:border-[#22332b] shadow-xs">
               <div className="flex items-center gap-3 mb-2">
-                <div className="p-2.5 rounded-xl bg-[#f0f7f2] text-[#245240]">
+                <div className="p-2.5 rounded-xl bg-[#e8f1ec] dark:bg-[#1c2c23] text-[#245240] dark:text-[#7bb173]">
                   <Calendar className="w-5 h-5" />
                 </div>
-                <span className="text-3xl font-serif font-bold text-[#245240]">2025</span>
+                <span className="text-3xl font-serif font-bold text-[#245240] dark:text-white">2025</span>
               </div>
-              <h4 className="text-sm font-semibold text-[#141716]">AVC Summit Convened</h4>
-              <p className="text-xs text-[#4a5751] mt-1">Catalyzing ecosystem dialogues.</p>
+              <h4 className="text-sm font-semibold text-[#141716] dark:text-[#e4ebe7]">AVC Summit Convened</h4>
+              <p className="text-xs text-[#4a5751] dark:text-[#94a89e] mt-1">Catalyzing ecosystem dialogues.</p>
             </div>
           </div>
         </Container>
       </section>
 
       {/* 3. WHO WE ARE & PURPOSE (WITH PHOTOGRAPHY) */}
-      <section className="py-20 sm:py-28 bg-[#fcfcfb]">
+      <section className="py-20 sm:py-28 bg-[#f0f3f1] dark:bg-[#0e1411] transition-colors duration-300">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
               <Badge variant="green" size="md">
                 Who We Are
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#245240] leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#245240] dark:text-white leading-tight">
                 Bridging the Gap Between Agricultural Need and Ecosystem Resources
               </h2>
-              <p className="text-base text-[#4a5751] leading-relaxed">
+              <p className="text-base text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
                 {COMPANY_PROFILE.summary}
               </p>
-              <p className="text-base text-[#4a5751] leading-relaxed">
+              <p className="text-base text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
                 {COMPANY_PROFILE.ecosystemRole}
               </p>
 
               {/* Purpose Callout Card */}
-              <div className="p-6 rounded-2xl bg-white border border-[#bbdecc]/60 shadow-xs">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#359540] block mb-1">
+              <div className="p-6 rounded-2xl bg-white dark:bg-[#141d18] border border-[#bbdecc]/70 dark:border-[#243a2e] shadow-xs">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#359540] dark:text-[#4ade80] block mb-1">
                   Our Purpose
                 </span>
-                <p className="text-sm text-[#245240] font-medium leading-relaxed italic">
+                <p className="text-sm text-[#245240] dark:text-[#d3e3db] font-medium leading-relaxed italic">
                   "{COMPANY_PROFILE.purpose}"
                 </p>
               </div>
@@ -245,7 +246,7 @@ export const HomePage: React.FC = () => {
 
             {/* Right: Photographic Composition with Vision & Mission */}
             <div className="lg:col-span-6 space-y-6">
-              <div className="rounded-3xl overflow-hidden shadow-md aspect-16/9 border border-[#e2e7e4]">
+              <div className="rounded-3xl overflow-hidden shadow-md aspect-16/9 border border-[#dce3df] dark:border-[#22332b]">
                 <img
                   src="/images/hero/hero-farm-aerial.jpg"
                   alt="Fertile African agricultural farmlands"
@@ -257,9 +258,9 @@ export const HomePage: React.FC = () => {
                 <Card variant="white" className="p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <ShieldCheck className="w-4 h-4 text-[#359540]" />
-                    <h3 className="text-base font-serif font-bold text-[#245240]">Our Vision</h3>
+                    <h3 className="text-base font-serif font-bold text-[#245240] dark:text-white">Our Vision</h3>
                   </div>
-                  <p className="text-xs text-[#4a5751] leading-relaxed">
+                  <p className="text-xs text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
                     {COMPANY_PROFILE.vision}
                   </p>
                 </Card>
@@ -267,9 +268,9 @@ export const HomePage: React.FC = () => {
                 <Card variant="white" className="p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <TrendingUp className="w-4 h-4 text-[#359540]" />
-                    <h3 className="text-base font-serif font-bold text-[#245240]">Our Mission</h3>
+                    <h3 className="text-base font-serif font-bold text-[#245240] dark:text-white">Our Mission</h3>
                   </div>
-                  <p className="text-xs text-[#4a5751] leading-relaxed">
+                  <p className="text-xs text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
                     {COMPANY_PROFILE.mission}
                   </p>
                 </Card>
@@ -280,7 +281,7 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* 4. THE SIX CORE SERVICE PILLARS (WITH DEDICATED PHOTOGRAPHY) */}
-      <section className="py-20 sm:py-28 bg-white border-t border-[#e2e7e4]">
+      <section className="py-20 sm:py-28 bg-[#e8ecea] dark:bg-[#101713] border-t border-[#dce3df] dark:border-[#1d2923] transition-colors duration-300">
         <Container>
           <SectionHeading
             badge="What We Do"
@@ -292,17 +293,17 @@ export const HomePage: React.FC = () => {
             {SERVICES_LIST.map((service, index) => (
               <div
                 key={service.id}
-                className="bg-white rounded-3xl border border-[#e2e7e4] overflow-hidden hover:border-[#359540]/60 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white dark:bg-[#141d18] rounded-3xl border border-[#dce3df] dark:border-[#22332b] overflow-hidden hover:border-[#359540]/60 dark:hover:border-[#7bb173]/60 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
               >
                 {/* Service Image Header */}
-                <div className="relative h-48 overflow-hidden bg-[#f0f7f2]">
+                <div className="relative h-48 overflow-hidden bg-[#e8f1ec] dark:bg-[#1b2b23]">
                   <img
                     src={service.imageSrc}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                  <div className="absolute top-4 left-4 p-2.5 rounded-xl bg-white/90 backdrop-blur-xs text-[#359540] shadow-sm">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                  <div className="absolute top-4 left-4 p-2.5 rounded-xl bg-white/90 dark:bg-[#141d18]/90 backdrop-blur-xs text-[#359540] dark:text-[#4ade80] shadow-sm">
                     {renderServiceIcon(service.iconName)}
                   </div>
                   <span className="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-black/60 text-white text-[10px] font-mono font-bold backdrop-blur-xs">
@@ -317,15 +318,15 @@ export const HomePage: React.FC = () => {
 
                 {/* Service Details */}
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                  <p className="text-xs sm:text-sm text-[#4a5751] leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
                     {service.shortDescription}
                   </p>
 
-                  <div className="border-t border-[#e2e7e4] pt-3">
+                  <div className="border-t border-[#dce3df] dark:border-[#1d2923] pt-3">
                     <span className="text-[10px] font-semibold uppercase tracking-wider text-[#7bb173] block mb-1.5">
                       Core Deliverables
                     </span>
-                    <ul className="space-y-1 text-xs text-[#2d3632]">
+                    <ul className="space-y-1 text-xs text-[#2d3632] dark:text-[#c4d2cb]">
                       {service.keyDeliverables.slice(0, 2).map((item, i) => (
                         <li key={i} className="flex items-start gap-1.5 line-clamp-1">
                           <span className="text-[#359540] font-bold">•</span>
@@ -338,7 +339,7 @@ export const HomePage: React.FC = () => {
                   <div className="pt-2">
                     <Link
                       to={`/services/${service.slug}`}
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#245240] group-hover:text-[#359540] transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#245240] dark:text-[#7bb173] group-hover:text-[#359540] dark:group-hover:text-white transition-colors"
                     >
                       <span>Read service details</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -358,7 +359,7 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* 5. FLAGSHIP PROGRAMME SPOTLIGHT: AAIRI (WITH PHOTOGRAPHY) */}
-      <section className="py-20 sm:py-28 bg-[#1b4332] text-white relative overflow-hidden">
+      <section className="py-20 sm:py-28 bg-[#1b4332] dark:bg-[#10241b] text-white relative overflow-hidden transition-colors duration-300">
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#359540]/10 rounded-full blur-3xl pointer-events-none" />
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-14">
@@ -454,22 +455,22 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* 6. AVC COMMUNITY & REGIONAL FOOTPRINT (WITH PHOTOGRAPHY) */}
-      <section className="py-20 sm:py-28 bg-[#fcfcfb] border-b border-[#e2e7e4]">
+      <section className="py-20 sm:py-28 bg-[#f0f3f1] dark:bg-[#0e1411] border-b border-[#dce3df] dark:border-[#1d2923] transition-colors duration-300">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 space-y-6">
               <Badge variant="green" size="md">
                 Grassroots & Continental Network
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#245240] leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#245240] dark:text-white leading-tight">
                 The Agribusiness and Value Chain (AVC) Community
               </h2>
-              <p className="text-base text-[#4a5751] leading-relaxed">
+              <p className="text-base text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
                 {AVC_COMMUNITY.summary}
               </p>
 
               {/* Community photo */}
-              <div className="rounded-2xl overflow-hidden shadow-sm border border-[#e2e7e4] aspect-16/9">
+              <div className="rounded-2xl overflow-hidden shadow-sm border border-[#dce3df] dark:border-[#22332b] aspect-16/9">
                 <img
                   src="/images/community/avc-community-field.jpg"
                   alt="African agribusiness owners in value chain cooperation"
@@ -486,13 +487,13 @@ export const HomePage: React.FC = () => {
 
             {/* Right: State Coordinators Interactive Grid */}
             <div className="lg:col-span-7">
-              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#e2e7e4] shadow-xs space-y-6">
-                <div className="flex items-center justify-between border-b border-[#e2e7e4] pb-4">
+              <div className="bg-white dark:bg-[#141d18] rounded-3xl p-6 sm:p-8 border border-[#dce3df] dark:border-[#22332b] shadow-xs space-y-6">
+                <div className="flex items-center justify-between border-b border-[#dce3df] dark:border-[#1d2923] pb-4">
                   <div>
-                    <h3 className="text-lg font-serif font-bold text-[#245240]">
-                      18 Nigerian States Represented
+                    <h3 className="text-lg font-serif font-bold text-[#245240] dark:text-white">
+                      19 Nigerian States Represented
                     </h3>
-                    <p className="text-xs text-[#4a5751]">
+                    <p className="text-xs text-[#4a5751] dark:text-[#a8b8b0]">
                       On-the-ground state coordinator leadership identifying local needs and mobilizing participants.
                     </p>
                   </div>
@@ -506,19 +507,19 @@ export const HomePage: React.FC = () => {
                   {NIGERIAN_STATES_NETWORK.map((state) => (
                     <div
                       key={state.name}
-                      className="p-3 rounded-xl bg-[#fcfcfb] border border-[#e2e7e4]/70 hover:border-[#359540]/60 hover:bg-[#f0f7f2] transition-colors"
+                      className="p-3 rounded-xl bg-[#f0f3f1] dark:bg-[#18231e] border border-[#dce3df]/70 dark:border-[#24352b] hover:border-[#359540]/60 hover:bg-[#e8ecea] dark:hover:bg-[#1f2e27] transition-colors"
                     >
                       <div className="flex items-center justify-between">
-                        <span className="text-xs font-bold text-[#245240]">{state.name}</span>
+                        <span className="text-xs font-bold text-[#245240] dark:text-[#7bb173]">{state.name}</span>
                         <span className="w-1.5 h-1.5 rounded-full bg-[#359540]" />
                       </div>
-                      <span className="text-[10px] text-[#4a5751] block mt-0.5">{state.region}</span>
+                      <span className="text-[10px] text-[#4a5751] dark:text-[#94a89e] block mt-0.5">{state.region}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* International reach */}
-                <div className="pt-4 border-t border-[#e2e7e4]">
+                <div className="pt-4 border-t border-[#dce3df] dark:border-[#1d2923]">
                   <span className="text-xs font-semibold uppercase tracking-wider text-[#7bb173] block mb-2">
                     International & Continental Reach
                   </span>
@@ -526,7 +527,7 @@ export const HomePage: React.FC = () => {
                     {INTERNATIONAL_REACH_COUNTRIES.map((country) => (
                       <span
                         key={country.name}
-                        className="px-2.5 py-1 rounded-full bg-[#f0f7f2] border border-[#bbdecc]/40 text-xs text-[#245240] font-medium"
+                        className="px-2.5 py-1 rounded-full bg-[#f0f3f1] dark:bg-[#18231e] border border-[#bbdecc]/40 dark:border-[#25392e] text-xs text-[#245240] dark:text-[#c4d2cb] font-medium"
                       >
                         {country.name}
                       </span>
@@ -540,7 +541,7 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* 7. HOW WE WORK: THE 4-STEP METHODOLOGY */}
-      <section className="py-20 sm:py-28 bg-white">
+      <section className="py-20 sm:py-28 bg-[#e8ecea] dark:bg-[#101713] transition-colors duration-300">
         <Container>
           <SectionHeading
             badge="Our Approach"
@@ -552,18 +553,18 @@ export const HomePage: React.FC = () => {
             {COMPANY_PROFILE.methodology.map((m) => (
               <div
                 key={m.step}
-                className="relative p-6 sm:p-8 rounded-2xl bg-[#fcfcfb] border border-[#e2e7e4] hover:shadow-md hover:border-[#359540]/50 transition-all group"
+                className="relative p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#141d18] border border-[#dce3df] dark:border-[#22332b] hover:shadow-md hover:border-[#359540]/50 transition-all group"
               >
-                <div className="w-12 h-12 rounded-2xl bg-[#f0f7f2] text-[#245240] flex items-center justify-center font-serif font-bold text-lg mb-4 group-hover:bg-[#245240] group-hover:text-white transition-colors">
+                <div className="w-12 h-12 rounded-2xl bg-[#e8f1ec] dark:bg-[#1c2c23] text-[#245240] dark:text-[#7bb173] flex items-center justify-center font-serif font-bold text-lg mb-4 group-hover:bg-[#245240] group-hover:text-white transition-colors">
                   {m.step}
                 </div>
-                <h3 className="text-xl font-serif font-bold text-[#245240] mb-2">
+                <h3 className="text-xl font-serif font-bold text-[#245240] dark:text-white mb-2">
                   {m.title}
                 </h3>
-                <p className="text-xs font-semibold text-[#359540] mb-3">
+                <p className="text-xs font-semibold text-[#359540] dark:text-[#4ade80] mb-3">
                   {m.description}
                 </p>
-                <p className="text-xs text-[#4a5751] leading-relaxed">
+                <p className="text-xs text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
                   {m.detail}
                 </p>
               </div>
@@ -572,12 +573,12 @@ export const HomePage: React.FC = () => {
         </Container>
       </section>
 
-      {/* 8. LEADERSHIP PROFILE (WITH EXECUTIVE PORTRAIT) */}
-      <section className="py-20 sm:py-28 bg-[#fcfcfb] border-y border-[#e2e7e4]">
+      {/* 8. LEADERSHIP PROFILE (ROYAL CREST EXECUTIVE PRESENTATION) */}
+      <section className="py-20 sm:py-28 bg-[#f0f3f1] dark:bg-[#0e1411] border-y border-[#dce3df] dark:border-[#1d2923] transition-colors duration-300">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5">
-              <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#245240] via-[#1b4332] to-[#143628] text-white shadow-xl border-4 border-white p-8 sm:p-10">
+              <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#245240] via-[#1b4332] to-[#143628] text-white shadow-xl border-4 border-white dark:border-[#22332b] p-8 sm:p-10">
                 {/* Background decorative brand petal */}
                 <div className="absolute top-0 right-0 w-48 h-48 opacity-10 pointer-events-none">
                   <img
@@ -633,10 +634,10 @@ export const HomePage: React.FC = () => {
               <Badge variant="green" size="md">
                 Leadership Profile
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#245240] leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#245240] dark:text-white leading-tight">
                 Two Decades of Enterprise, Agribusiness & Humanitarian Leadership
               </h2>
-              <div className="space-y-4 text-sm text-[#4a5751] leading-relaxed">
+              <div className="space-y-4 text-sm text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
                 <p>{COMPANY_PROFILE.leadership.bio[0]}</p>
                 <p>{COMPANY_PROFILE.leadership.bio[1]}</p>
                 <p>{COMPANY_PROFILE.leadership.bio[4]}</p>
@@ -653,22 +654,22 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* 9. PARTNERSHIP OPPORTUNITIES (WITH PHOTOGRAPHY) */}
-      <section className="py-20 sm:py-28 bg-white">
+      <section className="py-20 sm:py-28 bg-[#e8ecea] dark:bg-[#101713] transition-colors duration-300">
         <Container>
-          <div className="bg-[#f0f7f2] rounded-3xl p-8 sm:p-14 border border-[#bbdecc]/60">
+          <div className="bg-[#e2ebe6] dark:bg-[#14231b] rounded-3xl p-8 sm:p-14 border border-[#bbdecc]/70 dark:border-[#22392c]">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-10">
               <div className="lg:col-span-7 space-y-4">
                 <Badge variant="green" size="md">
                   Institutional Collaboration
                 </Badge>
-                <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#245240] leading-tight">
+                <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#245240] dark:text-white leading-tight">
                   Partner With ACL to Accelerate African Food Systems
                 </h2>
-                <p className="text-sm sm:text-base text-[#4a5751] leading-relaxed">
-                  We invite commercial banks, development finance institutions, off-takers, and technical organisations to leverage our community engagement platform and 18-state network to deliver high-impact interventions.
+                <p className="text-sm sm:text-base text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
+                  We invite commercial banks, development finance institutions, off-takers, and technical organisations to leverage our community engagement platform and 19-state network to deliver high-impact interventions.
                 </p>
               </div>
-              <div className="lg:col-span-5 rounded-2xl overflow-hidden shadow-md border border-[#bbdecc]/80 aspect-16/9">
+              <div className="lg:col-span-5 rounded-2xl overflow-hidden shadow-md border border-[#bbdecc]/80 dark:border-[#2a4535] aspect-16/9">
                 <img
                   src="/images/services/partnerships.jpg"
                   alt="Agricultural enterprise partnership and collaboration"
@@ -678,21 +679,21 @@ export const HomePage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-white p-6 rounded-2xl border border-[#e2e7e4] text-center">
-                <h4 className="text-base font-bold text-[#245240] mb-2">Financial Institutions</h4>
-                <p className="text-xs text-[#4a5751] leading-relaxed">
+              <div className="bg-white dark:bg-[#17271e] p-6 rounded-2xl border border-[#dce3df] dark:border-[#22332b] text-center shadow-xs">
+                <h4 className="text-base font-bold text-[#245240] dark:text-[#7bb173] mb-2">Financial Institutions</h4>
+                <p className="text-xs text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
                   Engage audit-ready agribusinesses profiled through our structured capacity frameworks.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-2xl border border-[#e2e7e4] text-center">
-                <h4 className="text-base font-bold text-[#245240] mb-2">Development Agencies</h4>
-                <p className="text-xs text-[#4a5751] leading-relaxed">
+              <div className="bg-white dark:bg-[#17271e] p-6 rounded-2xl border border-[#dce3df] dark:border-[#22332b] text-center shadow-xs">
+                <h4 className="text-base font-bold text-[#245240] dark:text-[#7bb173] mb-2">Development Agencies</h4>
+                <p className="text-xs text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
                   Deploy targeted women and youth inclusion programmes with grassroots state-coordinator execution.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-2xl border border-[#e2e7e4] text-center">
-                <h4 className="text-base font-bold text-[#245240] mb-2">Commercial Off-Takers</h4>
-                <p className="text-xs text-[#4a5751] leading-relaxed">
+              <div className="bg-white dark:bg-[#17271e] p-6 rounded-2xl border border-[#dce3df] dark:border-[#22332b] text-center shadow-xs">
+                <h4 className="text-base font-bold text-[#245240] dark:text-[#7bb173] mb-2">Commercial Off-Takers</h4>
+                <p className="text-xs text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
                   Establish reliable supply linkages and outgrower schemes across primary Nigerian food baskets.
                 </p>
               </div>

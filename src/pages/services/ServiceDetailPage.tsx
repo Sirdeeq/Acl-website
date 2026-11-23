@@ -18,7 +18,7 @@ import { Button } from '@/components/ui/Button'
 import { SERVICES_LIST } from '@/content/services.content'
 
 const renderServiceIcon = (name: string) => {
-  const className = "w-8 h-8 text-[#359540]"
+  const className = "w-8 h-8 text-[#359540] dark:text-[#4ade80]"
   switch (name) {
     case 'Tractor': return <Tractor className={className} />
     case 'GraduationCap': return <GraduationCap className={className} />
@@ -38,18 +38,17 @@ export const ServiceDetailPage: React.FC = () => {
     return <Navigate to="/services" replace />
   }
 
-  // Find next service for navigation
   const currentIndex = SERVICES_LIST.findIndex((s) => s.slug === slug)
   const nextService = SERVICES_LIST[(currentIndex + 1) % SERVICES_LIST.length]
 
   return (
-    <div className="py-12 sm:py-20">
+    <div className="py-12 sm:py-20 transition-colors duration-300">
       <Container>
         {/* Back Link */}
         <div className="mb-8">
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#359540] hover:text-[#245240] transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#359540] dark:text-[#7bb173] hover:text-[#245240] dark:hover:text-white transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Back to All Services</span>
@@ -57,11 +56,11 @@ export const ServiceDetailPage: React.FC = () => {
         </div>
 
         {/* Header Hero with Photography */}
-        <div className="bg-[#fcfcfb] rounded-3xl overflow-hidden border border-[#e2e7e4] mb-12 shadow-xs">
+        <div className="bg-white dark:bg-[#141d18] rounded-3xl overflow-hidden border border-[#dce3df] dark:border-[#22332b] mb-12 shadow-xs transition-colors">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
             <div className="lg:col-span-7 p-8 sm:p-14 space-y-4">
               <div className="flex items-center gap-4">
-                <div className="p-3 rounded-2xl bg-[#f0f7f2]">
+                <div className="p-3 rounded-2xl bg-[#e8f3ed] dark:bg-[#18261f]">
                   {renderServiceIcon(service.iconName)}
                 </div>
                 <Badge variant="green" size="md">
@@ -69,16 +68,16 @@ export const ServiceDetailPage: React.FC = () => {
                 </Badge>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#245240] leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#245240] dark:text-white leading-tight">
                 {service.title}
               </h1>
 
-              <p className="text-base sm:text-lg text-[#4a5751] leading-relaxed">
+              <p className="text-base sm:text-lg text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
                 {service.fullDescription}
               </p>
             </div>
 
-            <div className="lg:col-span-5 h-72 lg:h-full min-h-[300px] overflow-hidden bg-[#f0f7f2]">
+            <div className="lg:col-span-5 h-72 lg:h-full min-h-[300px] overflow-hidden bg-[#e8f3ed] dark:bg-[#18261f]">
               <img
                 src={service.imageSrc}
                 alt={service.title}
@@ -91,27 +90,27 @@ export const ServiceDetailPage: React.FC = () => {
         {/* Deliverables and Outcomes Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-16">
           {/* Key Deliverables */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-8 border border-[#e2e7e4] shadow-xs space-y-6">
-            <h3 className="text-xl font-serif font-bold text-[#245240]">
+          <div className="lg:col-span-7 bg-white dark:bg-[#141d18] rounded-3xl p-8 border border-[#dce3df] dark:border-[#22332b] shadow-xs space-y-6 transition-colors">
+            <h3 className="text-xl font-serif font-bold text-[#245240] dark:text-white">
               Operational Deliverables & Scope
             </h3>
             <ul className="space-y-4">
               {service.keyDeliverables.map((del, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#359540] shrink-0 mt-0.5" />
-                  <span className="text-sm text-[#2d3632] leading-relaxed">{del}</span>
+                  <CheckCircle2 className="w-5 h-5 text-[#359540] dark:text-[#4ade80] shrink-0 mt-0.5" />
+                  <span className="text-sm text-[#2d3632] dark:text-[#e4ebe7] leading-relaxed">{del}</span>
                 </li>
               ))}
             </ul>
 
-            <div className="pt-6 border-t border-[#e2e7e4]">
+            <div className="pt-6 border-t border-[#dce3df] dark:border-[#22332b]">
               <h4 className="text-sm font-semibold uppercase tracking-wider text-[#7bb173] mb-3">
                 Expected Strategic Outcomes
               </h4>
               <ul className="space-y-2">
                 {service.expectedOutcomes.map((out, i) => (
-                  <li key={i} className="flex items-start gap-2 text-xs text-[#4a5751]">
-                    <span className="text-[#359540] font-bold">•</span>
+                  <li key={i} className="flex items-start gap-2 text-xs text-[#4a5751] dark:text-[#a8b8b0]">
+                    <span className="text-[#359540] dark:text-[#4ade80] font-bold">•</span>
                     <span>{out}</span>
                   </li>
                 ))}
@@ -121,21 +120,21 @@ export const ServiceDetailPage: React.FC = () => {
 
           {/* Target Audience & Direct Engagement */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-[#f0f7f2] rounded-3xl p-8 border border-[#bbdecc]/50 space-y-4">
-              <h3 className="text-lg font-serif font-bold text-[#245240]">
+            <div className="bg-[#e8ecea] dark:bg-[#16211b] rounded-3xl p-8 border border-[#dce3df] dark:border-[#274434] space-y-4 transition-colors">
+              <h3 className="text-lg font-serif font-bold text-[#245240] dark:text-white">
                 Who This Service Is For
               </h3>
               <ul className="space-y-2.5">
                 {service.audience.map((aud, i) => (
-                  <li key={i} className="flex items-start gap-2 text-xs text-[#245240]">
-                    <ShieldCheck className="w-4 h-4 text-[#359540] shrink-0 mt-0.5" />
+                  <li key={i} className="flex items-start gap-2 text-xs text-[#245240] dark:text-[#bbdecc]">
+                    <ShieldCheck className="w-4 h-4 text-[#359540] dark:text-[#4ade80] shrink-0 mt-0.5" />
                     <span>{aud}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="bg-[#245240] text-white rounded-3xl p-8 space-y-4 text-center">
+            <div className="bg-[#245240] dark:bg-[#18382c] text-white rounded-3xl p-8 space-y-4 text-center border border-[#2d614d] shadow-md">
               <h3 className="text-xl font-serif font-bold text-white">
                 Engage ACL on This Service
               </h3>
@@ -150,11 +149,11 @@ export const ServiceDetailPage: React.FC = () => {
         </div>
 
         {/* Next Service Navigation */}
-        <div className="p-6 rounded-2xl bg-[#fcfcfb] border border-[#e2e7e4] flex items-center justify-between">
-          <span className="text-xs text-[#4a5751]">Next Service Area</span>
+        <div className="p-6 rounded-2xl bg-white dark:bg-[#141d18] border border-[#dce3df] dark:border-[#22332b] flex items-center justify-between transition-colors">
+          <span className="text-xs text-[#4a5751] dark:text-[#a8b8b0]">Next Service Area</span>
           <Link
             to={`/services/${nextService.slug}`}
-            className="inline-flex items-center gap-2 text-sm font-bold text-[#245240] hover:text-[#359540] transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-bold text-[#245240] dark:text-[#7bb173] hover:text-[#359540] dark:hover:text-[#4ade80] transition-colors"
           >
             <span>{nextService.title}</span>
             <ArrowRight className="w-4 h-4" />

@@ -21,7 +21,7 @@ export const PARTNERS_CONTENT = {
       id: 'dfis-donors',
       title: 'Development Finance Institutions & Donors',
       description:
-        'Deliver targeted agricultural development interventions with measurable grassroots impact, mobilizing women, youth, and rural communities across 18 Nigerian states.',
+        'Deliver targeted agricultural development interventions with measurable grassroots impact, mobilizing women, youth, and rural communities across 19 Nigerian states.',
       benefits: [
         'Extensive on-the-ground network of over 2,000 agribusiness owners',
         'Audited milestone tracking and transparent impact reporting',
@@ -60,7 +60,7 @@ export const PARTNERS_CONTENT = {
       status: 'Prospective Partnership',
       focus: 'State-Based Capacity Building & Financial Partnerships',
       description:
-        'ACL is developing a coordinated approach to capacity building across the 18 states represented in its network. A proposed partnership with the Development Bank of Nigeria seeks financial sponsorship and technical support for community-focused training.',
+        'ACL is developing a coordinated approach to capacity building across the 19 states represented in its network. A proposed partnership with the Development Bank of Nigeria seeks financial sponsorship and technical support for community-focused training.',
     },
     {
       partner: 'Women Entrepreneurship Forum Africa (WEFA) Nigeria',

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *, .grey, .grey *));
+
 @theme {
   --color-brand-pine: #245240;
   --color-brand-forest: #1b4332;
@@ -22,8 +24,8 @@
   --color-charcoal-200: #e2e7e4;
   --color-charcoal-100: #f2f5f3;
 
-  --color-warm-white: #fcfcfb;
-  --color-sand: #f5f6f3;
+  --color-bg-grey: #262d29;
+  --color-surface-white: #ffffff;
 
   --font-serif: "Fraunces", Georgia, Cambria, serif;
   --font-sans: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -32,12 +34,88 @@
 @layer base {
   html {
     font-family: var(--font-sans);
-    color: var(--color-charcoal-900);
-    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html.grey {
+    color-scheme: dark;
+  }
+
+  html.light {
+    color-scheme: light;
   }
 
   h1, h2, h3, h4 {
     font-family: var(--font-serif);
     letter-spacing: -0.02em;
   }
+}
+
+/* 1. Light Theme Overrides (Pure White Canvas) */
+html.light body,
+html.light .min-h-screen,
+html.light .bg-\[\#f0f3f1\] {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-\[\#e8ecea\] {
+  background-color: #f8faf8 !important;
+}
+
+html.light .bg-\[\#e8eeea\] {
+  background-color: #ffffff !important;
+}
+
+html.light header.sticky {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+}
+
+html.light .border-\[\#dce3df\] {
+  border-color: #e5ebe7 !important;
+}
+
+/* 2. Dark Grey Theme Overrides (Distinctive Dark Slate/Charcoal Grey Canvas) */
+html.grey body,
+html.grey .min-h-screen,
+html.grey .bg-\[\#f0f3f1\],
+html.grey .dark\:bg-\[\#0e1411\] {
+  background-color: #242b27 !important;
+}
+
+html.grey .bg-\[\#e8ecea\],
+html.grey .dark\:bg-\[\#121a15\],
+html.grey .dark\:bg-\[\#101713\] {
+  background-color: #1c221f !important;
+}
+
+html.grey .bg-white,
+html.grey .dark\:bg-\[\#141d18\] {
+  background-color: #2d3631 !important;
+}
+
+html.grey .dark\:bg-\[\#10241b\],
+html.grey .bg-\[\#1b4332\] {
+  background-color: #212925 !important;
+}
+
+html.grey .dark\:bg-\[\#18231e\],
+html.grey .dark\:bg-\[\#18261f\],
+html.grey .dark\:bg-\[\#16271e\],
+html.grey .dark\:bg-\[\#16211b\] {
+  background-color: #29322d !important;
+}
+
+html.grey header.sticky {
+  background-color: rgba(36, 43, 39, 0.96) !important;
+}
+
+html.grey .dark\:border-\[\#22332b\],
+html.grey .dark\:border-\[\#1d2923\],
+html.grey .dark\:border-\[\#25362d\],
+html.grey .border-\[\#dce3df\] {
+  border-color: #3d4a43 !important;
 }

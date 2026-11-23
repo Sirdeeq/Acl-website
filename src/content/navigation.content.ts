@@ -6,11 +6,10 @@ export const OFFICIAL_CONTACT_INFO = {
   primaryPhone: '+234 803 349 8179',
   secondaryPhone: '+234 913 078 3287',
   primaryEmail: 'adesewaconcept@gmail.com',
-  secondaryEmail: 'adesoladebbie@outlook.com',
   websiteDomain: 'www.aairi.africa',
   whatsappNumber: '+2348033498179',
   whatsappUrl: 'https://wa.me/2348033498179?text=Hello%20Adesewa%20Concept%20Ltd,%20I%20would%20like%20to%20inquire%20about%20your%20services%20and%20programmes.',
-  headquarters: 'Ekiti State & Nationwide Network (18 States Coordinator Network), Nigeria',
+  headquarters: 'Ekiti State & Nationwide Network (19 States Coordinator Network), Nigeria',
 }
 
 export const MAIN_NAV_ITEMS: NavItem[] = [
@@ -65,13 +64,13 @@ export const MAIN_NAV_ITEMS: NavItem[] = [
       {
         title: 'AAIRI Flagship Programme',
         href: '/programmes/aairi',
-        description: 'Adesewa Agribusiness Investment Readiness Initiative (4-phase journey & deal forums).',
+        description: 'African Agribusiness Investment and Recognition Initiative (4-phase journey & deal forums).',
         badge: 'Flagship',
       },
       {
         title: 'AVC Community',
         href: '/avc-community',
-        description: '2,000+ agribusiness owners across 18 Nigerian states and African markets.',
+        description: '2,000+ agribusiness owners across 19 Nigerian states and African markets.',
       },
     ],
   },
@@ -106,7 +105,7 @@ export const FOOTER_LINK_GROUPS: FooterLinkGroup[] = [
     links: [
       { label: 'AAIRI Investment Readiness', href: '/programmes/aairi' },
       { label: 'AVC Community (2,000+)', href: '/avc-community' },
-      { label: 'State Coordinator Network (18 States)', href: '/avc-community#state-network' },
+      { label: 'State Coordinator Network (19 States)', href: '/avc-community#state-network' },
       { label: 'AVC Learning Programme (2026-2027)', href: '/avc-community#learning-programme' },
       { label: 'AVC Summit 2025 Retrospective', href: '/insights/avc-summit-2025-convening-africas-agribusiness-ecosystem' },
     ],

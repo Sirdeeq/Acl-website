@@ -5,13 +5,13 @@ import { OFFICIAL_CONTACT_INFO } from '@/content/navigation.content'
 
 export const TermsPage: React.FC = () => {
   return (
-    <div className="py-12 sm:py-20">
+    <div className="py-12 sm:py-20 transition-colors duration-300">
       <Container size="narrow">
-        <header className="mb-10 pb-8 border-b border-[#e2e7e4] space-y-3">
+        <header className="mb-10 pb-8 border-b border-[#dce3df] dark:border-[#1d2923] space-y-3">
           <Badge variant="green" size="md">
             Legal Terms & Disclaimers
           </Badge>
-          <h1 className="text-3xl sm:text-4xl font-serif font-bold text-[#245240]">
+          <h1 className="text-3xl sm:text-4xl font-serif font-bold text-[#245240] dark:text-white">
             Terms of Use & Programme Disclaimers
           </h1>
           <p className="text-xs text-[#7bb173]">
@@ -19,9 +19,9 @@ export const TermsPage: React.FC = () => {
           </p>
         </header>
 
-        <div className="space-y-6 text-sm text-[#4a5751] leading-relaxed">
+        <div className="space-y-6 text-sm text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
           <section className="space-y-2">
-            <h2 className="text-lg font-serif font-bold text-[#245240]">
+            <h2 className="text-lg font-serif font-bold text-[#245240] dark:text-white">
               1. Institutional Mandate & Scope
             </h2>
             <p>
@@ -30,7 +30,7 @@ export const TermsPage: React.FC = () => {
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-lg font-serif font-bold text-[#245240]">
+            <h2 className="text-lg font-serif font-bold text-[#245240] dark:text-white">
               2. Financing & Investment Readiness Disclaimer
             </h2>
             <p>
@@ -39,7 +39,7 @@ export const TermsPage: React.FC = () => {
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-lg font-serif font-bold text-[#245240]">
+            <h2 className="text-lg font-serif font-bold text-[#245240] dark:text-white">
               3. Proposed Programmes & Future Timelines
             </h2>
             <p>
@@ -48,7 +48,7 @@ export const TermsPage: React.FC = () => {
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-lg font-serif font-bold text-[#245240]">
+            <h2 className="text-lg font-serif font-bold text-[#245240] dark:text-white">
               4. Intellectual Property
             </h2>
             <p>
@@ -57,12 +57,12 @@ export const TermsPage: React.FC = () => {
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-lg font-serif font-bold text-[#245240]">
+            <h2 className="text-lg font-serif font-bold text-[#245240] dark:text-white">
               5. Governing Law
             </h2>
             <p>
               These Terms shall be governed by and construed in accordance with the laws of the Federal Republic of Nigeria. For inquiries regarding these terms, contact{' '}
-              <a href={`mailto:${OFFICIAL_CONTACT_INFO.primaryEmail}`} className="text-[#359540] font-semibold underline">
+              <a href={`mailto:${OFFICIAL_CONTACT_INFO.primaryEmail}`} className="text-[#359540] dark:text-[#4ade80] font-semibold underline">
                 {OFFICIAL_CONTACT_INFO.primaryEmail}
               </a>
               .

@@ -50,25 +50,25 @@ export const Modal: React.FC<ModalProps> = ({
       {/* Modal Dialog */}
       <div
         className={cn(
-          'relative w-full bg-white rounded-3xl shadow-2xl border border-[#e2e7e4] z-10 overflow-hidden transform transition-all my-8',
+          'relative w-full bg-white dark:bg-[#141d18] rounded-3xl shadow-2xl border border-[#dce3df] dark:border-[#22332b] z-10 overflow-hidden transform transition-all my-8',
           maxWidthStyles[maxWidth],
         )}
       >
         {/* Header */}
-        <div className="flex items-start justify-between p-6 sm:p-8 border-b border-[#e2e7e4] bg-[#fcfcfb]">
+        <div className="flex items-start justify-between p-6 sm:p-8 border-b border-[#dce3df] dark:border-[#22332b] bg-[#f8faf8] dark:bg-[#18231d]">
           <div>
-            <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#245240]">
+            <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#245240] dark:text-white">
               {title}
             </h3>
             {subtitle && (
-              <p className="mt-1 text-sm text-[#4a5751] leading-relaxed">
+              <p className="mt-1 text-sm text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
                 {subtitle}
               </p>
             )}
           </div>
           <button
             onClick={onClose}
-            className="p-2 text-[#4a5751] hover:text-[#141716] hover:bg-[#f0f7f2] rounded-full transition-colors cursor-pointer"
+            className="p-2 text-[#4a5751] dark:text-[#a8b8b0] hover:text-[#141716] dark:hover:text-white hover:bg-[#e8ecea] dark:hover:bg-[#202e26] rounded-full transition-colors cursor-pointer"
             aria-label="Close dialog"
           >
             <X className="w-5 h-5" />
@@ -76,7 +76,7 @@ export const Modal: React.FC<ModalProps> = ({
         </div>
 
         {/* Content */}
-        <div className="p-6 sm:p-8 max-h-[75vh] overflow-y-auto">
+        <div className="p-6 sm:p-8 max-h-[75vh] overflow-y-auto text-[#141716] dark:text-[#e4ebe7]">
           {children}
         </div>
       </div>

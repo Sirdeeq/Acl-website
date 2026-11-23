@@ -15,27 +15,27 @@ import { PARTNERS_CONTENT } from '@/content/partners.content'
 
 export const PartnersPage: React.FC = () => {
   const iconMap: Record<string, React.ReactNode> = {
-    Building2: <Building2 className="w-8 h-8 text-[#359540]" />,
-    Globe: <Globe className="w-8 h-8 text-[#359540]" />,
-    Truck: <Truck className="w-8 h-8 text-[#359540]" />,
-    GraduationCap: <GraduationCap className="w-8 h-8 text-[#359540]" />,
+    Building2: <Building2 className="w-8 h-8 text-[#359540] dark:text-[#4ade80]" />,
+    Globe: <Globe className="w-8 h-8 text-[#359540] dark:text-[#4ade80]" />,
+    Truck: <Truck className="w-8 h-8 text-[#359540] dark:text-[#4ade80]" />,
+    GraduationCap: <GraduationCap className="w-8 h-8 text-[#359540] dark:text-[#4ade80]" />,
   }
 
   return (
-    <div className="py-12 sm:py-20">
+    <div className="py-12 sm:py-20 transition-colors duration-300">
       {/* Header */}
-      <section className="pb-16 sm:pb-20 border-b border-[#e2e7e4]">
+      <section className="pb-16 sm:pb-20 border-b border-[#dce3df] dark:border-[#1d2923]">
         <Container>
           <div className="max-w-4xl space-y-6">
             <Badge variant="green" size="md">
               Institutional Engagement
             </Badge>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#245240] leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#245240] dark:text-white leading-tight">
               {PARTNERS_CONTENT.headline}
             </h1>
 
-            <p className="text-base sm:text-xl text-[#4a5751] leading-relaxed">
+            <p className="text-base sm:text-xl text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
               {PARTNERS_CONTENT.subheadline}
             </p>
 
@@ -49,7 +49,7 @@ export const PartnersPage: React.FC = () => {
       </section>
 
       {/* Partner Categories */}
-      <section className="py-16 sm:py-24 bg-[#fcfcfb]">
+      <section className="py-16 sm:py-24 bg-[#e8ecea] dark:bg-[#121a15] transition-colors border-b border-[#dce3df] dark:border-[#1d2923]">
         <Container>
           <SectionHeading
             badge="Collaboration Models"
@@ -61,29 +61,29 @@ export const PartnersPage: React.FC = () => {
             {PARTNERS_CONTENT.partnerCategories.map((partner) => (
               <div
                 key={partner.id}
-                className="bg-white rounded-3xl p-8 sm:p-10 border border-[#e2e7e4] shadow-xs flex flex-col justify-between"
+                className="bg-white dark:bg-[#141d18] rounded-3xl p-8 sm:p-10 border border-[#dce3df] dark:border-[#22332b] shadow-xs flex flex-col justify-between transition-colors"
               >
                 <div>
-                  <div className="p-3.5 rounded-2xl bg-[#f0f7f2] w-fit mb-4">
-                    {iconMap[partner.icon] || <Building2 className="w-8 h-8 text-[#359540]" />}
+                  <div className="p-3.5 rounded-2xl bg-[#e8f3ed] dark:bg-[#18261f] w-fit mb-4">
+                    {iconMap[partner.icon] || <Building2 className="w-8 h-8 text-[#359540] dark:text-[#4ade80]" />}
                   </div>
 
-                  <h3 className="text-2xl font-serif font-bold text-[#245240] mb-3">
+                  <h3 className="text-2xl font-serif font-bold text-[#245240] dark:text-white mb-3">
                     {partner.title}
                   </h3>
 
-                  <p className="text-sm text-[#4a5751] leading-relaxed mb-6">
+                  <p className="text-sm text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed mb-6">
                     {partner.description}
                   </p>
 
-                  <div className="pt-4 border-t border-[#e2e7e4]">
+                  <div className="pt-4 border-t border-[#dce3df] dark:border-[#22332b]">
                     <span className="text-xs font-semibold uppercase tracking-wider text-[#7bb173] block mb-3">
                       Mutual Value & Outcomes
                     </span>
-                    <ul className="space-y-2 text-xs text-[#245240]">
+                    <ul className="space-y-2 text-xs text-[#245240] dark:text-[#e4ebe7]">
                       {partner.benefits.map((b, i) => (
                         <li key={i} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-[#359540] shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-4 h-4 text-[#359540] dark:text-[#4ade80] shrink-0 mt-0.5" />
                           <span>{b}</span>
                         </li>
                       ))}
@@ -97,17 +97,17 @@ export const PartnersPage: React.FC = () => {
       </section>
 
       {/* Prospective Initiatives Callout */}
-      <section className="py-16 sm:py-24 bg-white border-t border-[#e2e7e4]">
+      <section className="py-16 sm:py-24 bg-[#f0f3f1] dark:bg-[#0e1411] transition-colors">
         <Container>
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="text-center space-y-2">
               <Badge variant="amber" size="md">
                 Development Priorities
               </Badge>
-              <h2 className="text-3xl font-serif font-bold text-[#245240]">
+              <h2 className="text-3xl font-serif font-bold text-[#245240] dark:text-white">
                 Prospective & Ecosystem Alignments
               </h2>
-              <p className="text-sm text-[#4a5751]">
+              <p className="text-sm text-[#4a5751] dark:text-[#a8b8b0]">
                 Expanding capacity-building and inclusive value-chain opportunities across Nigeria.
               </p>
             </div>
@@ -116,20 +116,20 @@ export const PartnersPage: React.FC = () => {
               {PARTNERS_CONTENT.prospectiveInitiatives.map((item, idx) => (
                 <div
                   key={idx}
-                  className="bg-[#fcfcfb] rounded-2xl p-6 sm:p-8 border border-[#e2e7e4] space-y-3"
+                  className="bg-white dark:bg-[#141d18] rounded-2xl p-6 sm:p-8 border border-[#dce3df] dark:border-[#22332b] space-y-3 shadow-xs transition-colors"
                 >
-                  <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#e2e7e4] pb-3">
-                    <h3 className="text-lg font-serif font-bold text-[#245240]">
+                  <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#dce3df] dark:border-[#22332b] pb-3">
+                    <h3 className="text-lg font-serif font-bold text-[#245240] dark:text-white">
                       {item.partner}
                     </h3>
                     <Badge variant={item.status.includes('Prospective') ? 'amber' : 'green'} size="sm">
                       {item.status}
                     </Badge>
                   </div>
-                  <span className="text-xs font-semibold text-[#359540] block">
+                  <span className="text-xs font-semibold text-[#359540] dark:text-[#4ade80] block">
                     {item.focus}
                   </span>
-                  <p className="text-xs sm:text-sm text-[#4a5751] leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
                     {item.description}
                   </p>
                 </div>

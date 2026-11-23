@@ -16,25 +16,25 @@ import { OFFICIAL_CONTACT_INFO } from '@/content/navigation.content'
 
 export const AvcCommunityPage: React.FC = () => {
   return (
-    <div className="py-12 sm:py-20">
+    <div className="py-12 sm:py-20 transition-colors duration-300">
       {/* Header */}
-      <section className="pb-16 sm:pb-20 border-b border-[#e2e7e4]">
+      <section className="pb-16 sm:pb-20 border-b border-[#dce3df] dark:border-[#1d2923]">
         <Container>
           <div className="max-w-4xl space-y-6">
             <div className="flex flex-wrap items-center gap-3">
               <Badge variant="green" size="md">
                 Ongoing Ecosystem Platform
               </Badge>
-              <span className="text-xs font-semibold text-[#7bb173]">
+              <span className="text-xs font-semibold text-[#359540] dark:text-[#7bb173]">
                 Agribusiness and Value Chain (AVC) Community
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#245240] leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#245240] dark:text-white leading-tight">
               An Active Network of Over 2,000 Agribusiness Owners Across Africa
             </h1>
 
-            <p className="text-base sm:text-xl text-[#4a5751] leading-relaxed">
+            <p className="text-base sm:text-xl text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
               {AVC_COMMUNITY.summary}
             </p>
 
@@ -51,7 +51,7 @@ export const AvcCommunityPage: React.FC = () => {
                 href={OFFICIAL_CONTACT_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-[#25D366] text-[#25D366] font-medium text-sm hover:bg-[#25D366]/5 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-[#25D366] text-[#25D366] font-medium text-sm hover:bg-[#25D366]/10 transition-colors"
               >
                 <MessageSquare className="w-4 h-4" />
                 <span>Connect via WhatsApp</span>
@@ -62,7 +62,7 @@ export const AvcCommunityPage: React.FC = () => {
       </section>
 
       {/* Community Key Pillars */}
-      <section className="py-16 sm:py-24 bg-[#fcfcfb]">
+      <section className="py-16 sm:py-24 bg-[#e8ecea] dark:bg-[#121a15] transition-colors border-b border-[#dce3df] dark:border-[#1d2923]">
         <Container>
           <SectionHeading
             badge="Community Structure"
@@ -73,13 +73,13 @@ export const AvcCommunityPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {AVC_COMMUNITY.pillars.map((pillar, index) => (
               <Card key={index} variant="white" className="p-8 space-y-4">
-                <div className="w-10 h-10 rounded-2xl bg-[#f0f7f2] text-[#359540] flex items-center justify-center font-bold">
+                <div className="w-10 h-10 rounded-2xl bg-[#e8f3ed] dark:bg-[#18261f] text-[#359540] dark:text-[#4ade80] flex items-center justify-center font-bold">
                   0{index + 1}
                 </div>
-                <h3 className="text-xl font-serif font-bold text-[#245240]">
+                <h3 className="text-xl font-serif font-bold text-[#245240] dark:text-white">
                   {pillar.title}
                 </h3>
-                <p className="text-sm text-[#4a5751] leading-relaxed">
+                <p className="text-sm text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
                   {pillar.description}
                 </p>
               </Card>
@@ -88,22 +88,22 @@ export const AvcCommunityPage: React.FC = () => {
         </Container>
       </section>
 
-      {/* 18 Nigerian States Network */}
-      <section id="state-network" className="py-16 sm:py-24 bg-white border-t border-[#e2e7e4]">
+      {/* 19 Nigerian States Network */}
+      <section id="state-network" className="py-16 sm:py-24 bg-[#f0f3f1] dark:bg-[#0e1411] border-b border-[#dce3df] dark:border-[#1d2923] transition-colors">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 space-y-6">
               <Badge variant="green" size="md">
                 Grassroots Coverage
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#245240] leading-tight">
-                State Coordinator Representation Across 18 Nigerian States
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#245240] dark:text-white leading-tight">
+                State Coordinator Representation Across 19 Nigerian States
               </h2>
-              <p className="text-sm sm:text-base text-[#4a5751] leading-relaxed">
-                ACL’s AVC community is supported by state coordinator representation across 18 states in Nigeria. This on-the-ground network provides an active foundation for identifying local farming challenges, mobilizing participants, and coordinating targeted interventions.
+              <p className="text-sm sm:text-base text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
+                ACL’s AVC community is supported by state coordinator representation across 19 states in Nigeria. This on-the-ground network provides an active foundation for identifying local farming challenges, mobilizing participants, and coordinating targeted interventions.
               </p>
-              <div className="p-4 rounded-xl bg-[#f0f7f2] border border-[#bbdecc]/40 text-xs text-[#245240] flex items-start gap-2.5">
-                <ShieldCheck className="w-4 h-4 text-[#359540] shrink-0 mt-0.5" />
+              <div className="p-4 rounded-xl bg-[#e8f3ed] dark:bg-[#16271e] border border-[#bbdecc]/50 dark:border-[#274434] text-xs text-[#245240] dark:text-[#bbdecc] flex items-start gap-2.5">
+                <ShieldCheck className="w-4 h-4 text-[#359540] dark:text-[#4ade80] shrink-0 mt-0.5" />
                 <span>
                   Our state coordinators work closely with farmer cooperatives, commodity clusters, and state agricultural bureaus.
                 </span>
@@ -111,13 +111,13 @@ export const AvcCommunityPage: React.FC = () => {
             </div>
 
             {/* States Matrix */}
-            <div className="lg:col-span-7 bg-[#fcfcfb] rounded-3xl p-8 border border-[#e2e7e4] space-y-6">
-              <div className="flex items-center justify-between border-b border-[#e2e7e4] pb-4">
-                <h3 className="text-lg font-serif font-bold text-[#245240]">
+            <div className="lg:col-span-7 bg-white dark:bg-[#141d18] rounded-3xl p-8 border border-[#dce3df] dark:border-[#22332b] space-y-6 shadow-xs">
+              <div className="flex items-center justify-between border-b border-[#dce3df] dark:border-[#22332b] pb-4">
+                <h3 className="text-lg font-serif font-bold text-[#245240] dark:text-white">
                   Active State Network
                 </h3>
-                <span className="text-xs text-[#359540] font-semibold">
-                  18 States Fully Represented
+                <span className="text-xs text-[#359540] dark:text-[#4ade80] font-semibold">
+                  19 States Fully Represented
                 </span>
               </div>
 
@@ -125,32 +125,32 @@ export const AvcCommunityPage: React.FC = () => {
                 {NIGERIAN_STATES_NETWORK.map((state) => (
                   <div
                     key={state.name}
-                    className="p-3.5 rounded-xl bg-white border border-[#e2e7e4] flex items-center justify-between"
+                    className="p-3.5 rounded-xl bg-[#f8faf8] dark:bg-[#101713] border border-[#dce3df] dark:border-[#22332b] flex items-center justify-between"
                   >
                     <div>
-                      <span className="text-xs font-bold text-[#245240] block">
+                      <span className="text-xs font-bold text-[#245240] dark:text-white block">
                         {state.name} State
                       </span>
-                      <span className="text-[10px] text-[#4a5751]">{state.region}</span>
+                      <span className="text-[10px] text-[#4a5751] dark:text-[#a8b8b0]">{state.region}</span>
                     </div>
-                    <span className="w-2 h-2 rounded-full bg-[#359540]" />
+                    <span className="w-2 h-2 rounded-full bg-[#359540] dark:bg-[#4ade80]" />
                   </div>
                 ))}
               </div>
 
               {/* International Reach */}
-              <div className="pt-4 border-t border-[#e2e7e4]">
+              <div className="pt-4 border-t border-[#dce3df] dark:border-[#22332b]">
                 <span className="text-xs font-semibold uppercase tracking-wider text-[#7bb173] block mb-2">
                   Continental & Diaspora Representation
                 </span>
-                <p className="text-xs text-[#4a5751] mb-3">
+                <p className="text-xs text-[#4a5751] dark:text-[#a8b8b0] mb-3">
                   Representation extends across key African markets and international trade hubs:
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {INTERNATIONAL_REACH_COUNTRIES.map((country) => (
                     <span
                       key={country.name}
-                      className="px-3 py-1 rounded-full bg-white border border-[#e2e7e4] text-xs text-[#245240] font-medium"
+                      className="px-3 py-1 rounded-full bg-[#f8faf8] dark:bg-[#101713] border border-[#dce3df] dark:border-[#22332b] text-xs text-[#245240] dark:text-[#bbdecc] font-medium"
                     >
                       {country.name} ({country.region})
                     </span>
@@ -163,7 +163,7 @@ export const AvcCommunityPage: React.FC = () => {
       </section>
 
       {/* Upcoming Learning Programme & Development Priorities */}
-      <section id="learning-programme" className="py-16 sm:py-24 bg-[#fcfcfb] border-t border-[#e2e7e4]">
+      <section id="learning-programme" className="py-16 sm:py-24 bg-[#e8ecea] dark:bg-[#121a15] transition-colors">
         <Container>
           <SectionHeading
             badge="Ongoing Roadmap"
@@ -175,15 +175,15 @@ export const AvcCommunityPage: React.FC = () => {
             {AVC_COMMUNITY.developmentPriorities.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-2xl p-6 sm:p-8 border border-[#e2e7e4] shadow-xs space-y-2"
+                className="bg-white dark:bg-[#141d18] rounded-2xl p-6 sm:p-8 border border-[#dce3df] dark:border-[#22332b] shadow-xs space-y-2 transition-colors"
               >
                 <div className="flex items-center gap-3">
-                  <Calendar className="w-5 h-5 text-[#359540]" />
-                  <h4 className="text-lg font-serif font-bold text-[#245240]">
+                  <Calendar className="w-5 h-5 text-[#359540] dark:text-[#4ade80]" />
+                  <h4 className="text-lg font-serif font-bold text-[#245240] dark:text-white">
                     {item.title}
                   </h4>
                 </div>
-                <p className="text-xs sm:text-sm text-[#4a5751] leading-relaxed pl-8">
+                <p className="text-xs sm:text-sm text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed pl-8">
                   {item.detail}
                 </p>
               </div>

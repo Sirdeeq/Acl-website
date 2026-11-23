@@ -63,14 +63,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({ defaultCategory }) => 
 
   if (isSubmitted) {
     return (
-      <div className="rounded-3xl bg-[#f0f7f2] border border-[#bbdecc] p-8 sm:p-10 text-center">
-        <div className="w-16 h-16 rounded-full bg-[#359540]/15 flex items-center justify-center mx-auto mb-4 text-[#359540]">
+      <div className="rounded-3xl bg-[#e8f3ed] dark:bg-[#14261c] border border-[#bbdecc] dark:border-[#274434] p-8 sm:p-10 text-center transition-colors">
+        <div className="w-16 h-16 rounded-full bg-[#359540]/15 dark:bg-[#359540]/25 flex items-center justify-center mx-auto mb-4 text-[#359540] dark:text-[#4ade80]">
           <CheckCircle2 className="w-8 h-8" />
         </div>
-        <h3 className="text-2xl font-serif font-bold text-[#245240] mb-2">
+        <h3 className="text-2xl font-serif font-bold text-[#245240] dark:text-white mb-2">
           Thank You for Contacting Adesewa Concept Ltd
         </h3>
-        <p className="text-sm text-[#4a5751] max-w-md mx-auto mb-6 leading-relaxed">
+        <p className="text-sm text-[#4a5751] dark:text-[#bbdecc] max-w-md mx-auto mb-6 leading-relaxed">
           Your inquiry has been received. Our advisory team will review your submission and respond promptly.
         </p>
         <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -85,7 +85,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ defaultCategory }) => 
             href={OFFICIAL_CONTACT_INFO.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs font-semibold text-[#245240] hover:underline"
+            className="inline-flex items-center gap-2 text-xs font-semibold text-[#245240] dark:text-[#7bb173] hover:underline"
           >
             Or reach us immediately on WhatsApp →
           </a>
@@ -97,7 +97,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ defaultCategory }) => 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       {submissionError && (
-        <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm flex items-center gap-2">
+        <div className="p-4 rounded-xl bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-900/50 text-red-700 dark:text-red-300 text-sm flex items-center gap-2">
           <AlertCircle className="w-5 h-5 shrink-0" />
           <span>{submissionError}</span>
         </div>
@@ -106,7 +106,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ defaultCategory }) => 
       {/* Row 1: Name and Email */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label className="block text-xs font-semibold uppercase tracking-wider text-[#245240] mb-2">
+          <label className="block text-xs font-semibold uppercase tracking-wider text-[#245240] dark:text-[#7bb173] mb-2">
             Full Name <span className="text-red-500">*</span>
           </label>
           <input
@@ -115,17 +115,17 @@ export const ContactForm: React.FC<ContactFormProps> = ({ defaultCategory }) => 
             {...register('fullName')}
             className={`w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none ${
               errors.fullName
-                ? 'border-red-400 bg-red-50/30 focus:border-red-500'
-                : 'border-[#e2e7e4] bg-[#fcfcfb] focus:border-[#359540] focus:ring-2 focus:ring-[#359540]/20'
+                ? 'border-red-400 dark:border-red-500/50 bg-red-50/30 dark:bg-red-950/20 text-red-900 dark:text-red-200 focus:border-red-500'
+                : 'border-[#dce3df] dark:border-[#24362c] bg-[#f8faf8] dark:bg-[#101713] text-[#141716] dark:text-white placeholder-[#93a29b] dark:placeholder-[#5c7066] focus:border-[#359540] dark:focus:border-[#4ade80] focus:ring-2 focus:ring-[#359540]/20'
             }`}
           />
           {errors.fullName && (
-            <p className="mt-1 text-xs text-red-600">{errors.fullName.message}</p>
+            <p className="mt-1 text-xs text-red-600 dark:text-red-400">{errors.fullName.message}</p>
           )}
         </div>
 
         <div>
-          <label className="block text-xs font-semibold uppercase tracking-wider text-[#245240] mb-2">
+          <label className="block text-xs font-semibold uppercase tracking-wider text-[#245240] dark:text-[#7bb173] mb-2">
             Email Address <span className="text-red-500">*</span>
           </label>
           <input
@@ -134,12 +134,12 @@ export const ContactForm: React.FC<ContactFormProps> = ({ defaultCategory }) => 
             {...register('email')}
             className={`w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none ${
               errors.email
-                ? 'border-red-400 bg-red-50/30 focus:border-red-500'
-                : 'border-[#e2e7e4] bg-[#fcfcfb] focus:border-[#359540] focus:ring-2 focus:ring-[#359540]/20'
+                ? 'border-red-400 dark:border-red-500/50 bg-red-50/30 dark:bg-red-950/20 text-red-900 dark:text-red-200 focus:border-red-500'
+                : 'border-[#dce3df] dark:border-[#24362c] bg-[#f8faf8] dark:bg-[#101713] text-[#141716] dark:text-white placeholder-[#93a29b] dark:placeholder-[#5c7066] focus:border-[#359540] dark:focus:border-[#4ade80] focus:ring-2 focus:ring-[#359540]/20'
             }`}
           />
           {errors.email && (
-            <p className="mt-1 text-xs text-red-600">{errors.email.message}</p>
+            <p className="mt-1 text-xs text-red-600 dark:text-red-400">{errors.email.message}</p>
           )}
         </div>
       </div>
@@ -147,7 +147,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ defaultCategory }) => 
       {/* Row 2: Phone and Organization */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label className="block text-xs font-semibold uppercase tracking-wider text-[#245240] mb-2">
+          <label className="block text-xs font-semibold uppercase tracking-wider text-[#245240] dark:text-[#7bb173] mb-2">
             Phone / WhatsApp Number <span className="text-red-500">*</span>
           </label>
           <input
@@ -156,24 +156,24 @@ export const ContactForm: React.FC<ContactFormProps> = ({ defaultCategory }) => 
             {...register('phoneNumber')}
             className={`w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none ${
               errors.phoneNumber
-                ? 'border-red-400 bg-red-50/30 focus:border-red-500'
-                : 'border-[#e2e7e4] bg-[#fcfcfb] focus:border-[#359540] focus:ring-2 focus:ring-[#359540]/20'
+                ? 'border-red-400 dark:border-red-500/50 bg-red-50/30 dark:bg-red-950/20 text-red-900 dark:text-red-200 focus:border-red-500'
+                : 'border-[#dce3df] dark:border-[#24362c] bg-[#f8faf8] dark:bg-[#101713] text-[#141716] dark:text-white placeholder-[#93a29b] dark:placeholder-[#5c7066] focus:border-[#359540] dark:focus:border-[#4ade80] focus:ring-2 focus:ring-[#359540]/20'
             }`}
           />
           {errors.phoneNumber && (
-            <p className="mt-1 text-xs text-red-600">{errors.phoneNumber.message}</p>
+            <p className="mt-1 text-xs text-red-600 dark:text-red-400">{errors.phoneNumber.message}</p>
           )}
         </div>
 
         <div>
-          <label className="block text-xs font-semibold uppercase tracking-wider text-[#245240] mb-2">
+          <label className="block text-xs font-semibold uppercase tracking-wider text-[#245240] dark:text-[#7bb173] mb-2">
             Farm / Organization Name
           </label>
           <input
             type="text"
             placeholder="e.g. GreenHorizon Integrated Farms"
             {...register('organization')}
-            className="w-full px-4 py-3 rounded-xl border border-[#e2e7e4] bg-[#fcfcfb] text-sm focus:border-[#359540] focus:ring-2 focus:ring-[#359540]/20 focus:outline-none"
+            className="w-full px-4 py-3 rounded-xl border border-[#dce3df] dark:border-[#24362c] bg-[#f8faf8] dark:bg-[#101713] text-[#141716] dark:text-white placeholder-[#93a29b] dark:placeholder-[#5c7066] text-sm focus:border-[#359540] dark:focus:border-[#4ade80] focus:ring-2 focus:ring-[#359540]/20 focus:outline-none"
           />
         </div>
       </div>
@@ -181,44 +181,44 @@ export const ContactForm: React.FC<ContactFormProps> = ({ defaultCategory }) => 
       {/* Row 3: Inquiry Category & State */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label className="block text-xs font-semibold uppercase tracking-wider text-[#245240] mb-2">
+          <label className="block text-xs font-semibold uppercase tracking-wider text-[#245240] dark:text-[#7bb173] mb-2">
             Inquiry Category <span className="text-red-500">*</span>
           </label>
           <select
             {...register('category')}
-            className={`w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none bg-[#fcfcfb] ${
+            className={`w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none bg-[#f8faf8] dark:bg-[#101713] text-[#141716] dark:text-white ${
               errors.category
-                ? 'border-red-400 focus:border-red-500'
-                : 'border-[#e2e7e4] focus:border-[#359540] focus:ring-2 focus:ring-[#359540]/20'
+                ? 'border-red-400 dark:border-red-500/50 focus:border-red-500'
+                : 'border-[#dce3df] dark:border-[#24362c] focus:border-[#359540] dark:focus:border-[#4ade80] focus:ring-2 focus:ring-[#359540]/20'
             }`}
           >
             {INQUIRY_CATEGORIES.map((cat) => (
-              <option key={cat.value} value={cat.value}>
+              <option key={cat.value} value={cat.value} className="bg-white dark:bg-[#101713] text-[#141716] dark:text-white">
                 {cat.label}
               </option>
             ))}
           </select>
           {errors.category && (
-            <p className="mt-1 text-xs text-red-600">{errors.category.message}</p>
+            <p className="mt-1 text-xs text-red-600 dark:text-red-400">{errors.category.message}</p>
           )}
         </div>
 
         <div>
-          <label className="block text-xs font-semibold uppercase tracking-wider text-[#245240] mb-2">
+          <label className="block text-xs font-semibold uppercase tracking-wider text-[#245240] dark:text-[#7bb173] mb-2">
             State / Location in Nigeria or Country
           </label>
           <input
             type="text"
-            placeholder="e.g. Ekiti, Oyo, Benue, or Lagos"
+            placeholder="e.g. Ekiti, Oyo, Akwa Ibom, or Lagos"
             {...register('stateOrLocation')}
-            className="w-full px-4 py-3 rounded-xl border border-[#e2e7e4] bg-[#fcfcfb] text-sm focus:border-[#359540] focus:ring-2 focus:ring-[#359540]/20 focus:outline-none"
+            className="w-full px-4 py-3 rounded-xl border border-[#dce3df] dark:border-[#24362c] bg-[#f8faf8] dark:bg-[#101713] text-[#141716] dark:text-white placeholder-[#93a29b] dark:placeholder-[#5c7066] text-sm focus:border-[#359540] dark:focus:border-[#4ade80] focus:ring-2 focus:ring-[#359540]/20 focus:outline-none"
           />
         </div>
       </div>
 
       {/* Message */}
       <div>
-        <label className="block text-xs font-semibold uppercase tracking-wider text-[#245240] mb-2">
+        <label className="block text-xs font-semibold uppercase tracking-wider text-[#245240] dark:text-[#7bb173] mb-2">
           Your Message or Objective <span className="text-red-500">*</span>
         </label>
         <textarea
@@ -227,12 +227,12 @@ export const ContactForm: React.FC<ContactFormProps> = ({ defaultCategory }) => 
           {...register('message')}
           className={`w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none ${
             errors.message
-              ? 'border-red-400 bg-red-50/30 focus:border-red-500'
-              : 'border-[#e2e7e4] bg-[#fcfcfb] focus:border-[#359540] focus:ring-2 focus:ring-[#359540]/20'
+              ? 'border-red-400 dark:border-red-500/50 bg-red-50/30 dark:bg-red-950/20 text-red-900 dark:text-red-200 focus:border-red-500'
+              : 'border-[#dce3df] dark:border-[#24362c] bg-[#f8faf8] dark:bg-[#101713] text-[#141716] dark:text-white placeholder-[#93a29b] dark:placeholder-[#5c7066] focus:border-[#359540] dark:focus:border-[#4ade80] focus:ring-2 focus:ring-[#359540]/20'
           }`}
         />
         {errors.message && (
-          <p className="mt-1 text-xs text-red-600">{errors.message.message}</p>
+          <p className="mt-1 text-xs text-red-600 dark:text-red-400">{errors.message.message}</p>
         )}
       </div>
 
@@ -242,14 +242,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({ defaultCategory }) => 
           <input
             type="checkbox"
             {...register('consentGiven')}
-            className="mt-1 w-4 h-4 rounded text-[#359540] border-[#e2e7e4] focus:ring-[#359540]"
+            className="mt-1 w-4 h-4 rounded text-[#359540] border-[#dce3df] dark:border-[#24362c] focus:ring-[#359540] dark:bg-[#101713]"
           />
-          <span className="text-xs text-[#4a5751] leading-relaxed">
+          <span className="text-xs text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
             I agree that Adesewa Concept Ltd may collect and process my information in accordance with its privacy standards to respond to this inquiry. I understand financing and partnership decisions are subject to formal evaluation.
           </span>
         </label>
         {errors.consentGiven && (
-          <p className="mt-1 text-xs text-red-600">{errors.consentGiven.message}</p>
+          <p className="mt-1 text-xs text-red-600 dark:text-red-400">{errors.consentGiven.message}</p>
         )}
       </div>
 

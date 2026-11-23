@@ -15,19 +15,19 @@ export const Card: React.FC<CardProps> = ({
   ...props
 }) => {
   const variantStyles = {
-    white: 'bg-white border border-[#e2e7e4] text-[#141716] shadow-xs',
-    sand: 'bg-[#f5f6f3] border border-[#e2e7e4] text-[#141716]',
-    pine: 'bg-[#245240] border border-[#2d614d] text-white',
-    tint: 'bg-[#f0f7f2] border border-[#bbdecc]/40 text-[#141716]',
+    white: 'bg-white dark:bg-[#141d18] border border-[#dce3df] dark:border-[#22332b] text-[#141716] dark:text-[#e4ebe7] shadow-xs',
+    sand: 'bg-[#e7ece9] dark:bg-[#18231d] border border-[#dce3df] dark:border-[#25362d] text-[#141716] dark:text-[#e4ebe7]',
+    pine: 'bg-[#245240] dark:bg-[#18382c] border border-[#2d614d] text-white',
+    tint: 'bg-[#e6f1eb] dark:bg-[#16271e] border border-[#bbdecc]/60 dark:border-[#2b4b39] text-[#141716] dark:text-[#e4ebe7]',
   }
 
   return (
     <div
       className={cn(
-        'rounded-2xl p-6 sm:p-8 transition-all duration-300',
+        'rounded-3xl p-6 sm:p-8 transition-all duration-300',
         variantStyles[variant],
         hoverEffect &&
-          'hover:-translate-y-1 hover:shadow-md hover:border-[#7bb173]/60',
+          'hover:-translate-y-1 hover:shadow-md hover:border-[#7bb173]/80 dark:hover:border-[#7bb173]/60',
         className,
       )}
       {...props}

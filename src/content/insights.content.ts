@@ -15,7 +15,7 @@ export const INSIGHTS_ITEMS: InsightItem[] = [
       'ACL convened an Agribusiness and Value Chain (AVC) summit in 2025 to encourage wider participation in the agricultural ecosystem, including deliberate engagement with vulnerable and underserved communities.',
       'The summit served as a crucial dialogue and action platform, unpacking systemic bottlenecks in agricultural financing, input supply, post-harvest losses, and route-to-market barriers faced by micro and small agribusinesses across Nigeria and Africa.',
       'Subsequent requests from participants and community members reinforced the acute need for sustained, structured support across financing, enterprise management, capacity building, and market access. This momentum led directly to the formalized expansion of the AVC Community and the conceptualization of the AAIRI flagship initiative.',
-      'Moving forward, the outcomes of the 2025 Summit continue to guide ACL’s community-focused training, state-coordinator deployment across 18 states, and strategic partnerships with institutional stakeholders.',
+      'Moving forward, the outcomes of the 2025 Summit continue to guide ACL’s community-focused training, state-coordinator deployment across 19 states, and strategic partnerships with institutional stakeholders.',
     ],
     tags: ['AVC Summit', 'Ecosystem Dialogue', 'Inclusion', 'Food Systems'],
     featured: true,

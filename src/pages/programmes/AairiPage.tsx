@@ -16,9 +16,9 @@ export const AairiPage: React.FC = () => {
   const [modalOpen, setModalOpen] = useState(false)
 
   return (
-    <div className="py-12 sm:py-20">
+    <div className="py-12 sm:py-20 transition-colors duration-300">
       {/* Header Banner */}
-      <section className="pb-16 sm:pb-24 border-b border-[#e2e7e4]">
+      <section className="pb-16 sm:pb-24 border-b border-[#dce3df] dark:border-[#1d2923]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7 space-y-6">
@@ -26,16 +26,16 @@ export const AairiPage: React.FC = () => {
                 <Badge variant="green" size="md">
                   Flagship Initiative
                 </Badge>
-                <span className="text-xs font-semibold text-[#7bb173]">
+                <span className="text-xs font-semibold text-[#359540] dark:text-[#7bb173]">
                   Adesewa Agribusiness Investment Readiness Initiative
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#245240] leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#245240] dark:text-white leading-tight">
                 Preparing African Agribusinesses for Investment & Sustainable Growth
               </h1>
 
-              <p className="text-base sm:text-xl text-[#4a5751] leading-relaxed">
+              <p className="text-base sm:text-xl text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed">
                 {AAIRI_PROGRAMME.summary}
               </p>
 
@@ -58,7 +58,7 @@ export const AairiPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-5 rounded-3xl overflow-hidden shadow-xl border-4 border-white aspect-4/3">
+            <div className="lg:col-span-5 rounded-3xl overflow-hidden shadow-xl border-4 border-white/80 dark:border-[#22332b] aspect-4/3">
               <img
                 src={AAIRI_PROGRAMME.imageSrc}
                 alt="AAIRI Bootcamp and deal forums"
@@ -70,7 +70,7 @@ export const AairiPage: React.FC = () => {
       </section>
 
       {/* Programme Objectives */}
-      <section className="py-16 sm:py-24 bg-[#fcfcfb]">
+      <section className="py-16 sm:py-24 bg-[#e8ecea] dark:bg-[#121a15] transition-colors border-b border-[#dce3df] dark:border-[#1d2923]">
         <Container>
           <SectionHeading
             badge="Strategic Mandate"
@@ -81,10 +81,10 @@ export const AairiPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {AAIRI_PROGRAMME.objectives.map((obj, i) => (
               <Card key={i} variant="white" className="p-6 sm:p-8">
-                <div className="w-8 h-8 rounded-full bg-[#f0f7f2] text-[#359540] flex items-center justify-center font-bold text-xs mb-4">
+                <div className="w-8 h-8 rounded-full bg-[#e8f3ed] dark:bg-[#18261f] text-[#359540] dark:text-[#4ade80] flex items-center justify-center font-bold text-xs mb-4">
                   0{i + 1}
                 </div>
-                <p className="text-sm text-[#245240] font-medium leading-relaxed">
+                <p className="text-sm text-[#245240] dark:text-[#e4ebe7] font-medium leading-relaxed">
                   {obj}
                 </p>
               </Card>
@@ -94,7 +94,7 @@ export const AairiPage: React.FC = () => {
       </section>
 
       {/* The Four-Phase Journey */}
-      <section className="py-16 sm:py-24 bg-white border-t border-[#e2e7e4]">
+      <section className="py-16 sm:py-24 bg-[#f0f3f1] dark:bg-[#0e1411] border-b border-[#dce3df] dark:border-[#1d2923] transition-colors">
         <Container>
           <SectionHeading
             badge="The 4-Phase Pathway"
@@ -106,18 +106,18 @@ export const AairiPage: React.FC = () => {
             {AAIRI_PROGRAMME.phases.map((phase) => (
               <div
                 key={phase.phase}
-                className="bg-[#fcfcfb] rounded-3xl p-8 sm:p-10 border border-[#e2e7e4] hover:border-[#359540]/60 transition-all duration-300"
+                className="bg-white dark:bg-[#141d18] rounded-3xl p-8 sm:p-10 border border-[#dce3df] dark:border-[#22332b] hover:border-[#359540]/60 dark:hover:border-[#4ade80]/60 transition-all duration-300 shadow-xs"
               >
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4 pb-4 border-b border-[#e2e7e4]">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4 pb-4 border-b border-[#dce3df] dark:border-[#22332b]">
                   <div className="flex items-center gap-3">
-                    <span className="w-10 h-10 rounded-full bg-[#245240] text-white flex items-center justify-center font-bold text-base">
+                    <span className="w-10 h-10 rounded-full bg-[#245240] dark:bg-[#1f4a39] text-white flex items-center justify-center font-bold text-base">
                       {phase.phase}
                     </span>
                     <div>
-                      <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#245240]">
+                      <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#245240] dark:text-white">
                         {phase.title}
                       </h3>
-                      <span className="text-xs font-semibold text-[#359540]">
+                      <span className="text-xs font-semibold text-[#359540] dark:text-[#4ade80]">
                         {phase.tagline}
                       </span>
                     </div>
@@ -127,27 +127,27 @@ export const AairiPage: React.FC = () => {
                   </Badge>
                 </div>
 
-                <p className="text-sm text-[#4a5751] leading-relaxed mb-6">
+                <p className="text-sm text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed mb-6">
                   {phase.description}
                 </p>
 
                 {phase.statusNote && (
-                  <div className="mb-6 p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-800 flex items-start gap-2.5">
-                    <ShieldAlert className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                  <div className="mb-6 p-4 rounded-xl bg-amber-50/80 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/40 text-xs text-amber-800 dark:text-amber-300 flex items-start gap-2.5">
+                    <ShieldAlert className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
                     <span>
                       <strong>Proposed Initiative Note:</strong> {phase.statusNote}
                     </span>
                   </div>
                 )}
 
-                <div className="bg-white rounded-2xl p-5 border border-[#e2e7e4]/80">
+                <div className="bg-[#f8faf8] dark:bg-[#101713] rounded-2xl p-5 border border-[#dce3df] dark:border-[#22332b]">
                   <span className="text-xs font-semibold uppercase tracking-wider text-[#7bb173] block mb-2">
                     Key Programme Milestones
                   </span>
-                  <ul className="space-y-1.5 text-xs text-[#245240]">
+                  <ul className="space-y-1.5 text-xs text-[#245240] dark:text-[#e4ebe7]">
                     {phase.deliverables.map((del, dIdx) => (
                       <li key={dIdx} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-[#359540] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-[#359540] dark:text-[#4ade80] shrink-0 mt-0.5" />
                         <span>{del}</span>
                       </li>
                     ))}

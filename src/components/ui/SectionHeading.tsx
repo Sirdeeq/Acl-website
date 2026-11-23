@@ -34,7 +34,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
           <Badge
             variant={isDark ? 'sand' : 'green'}
             size="md"
-            className={isDark ? 'bg-white/10 text-white border-white/20' : ''}
+            className={isDark ? 'bg-white/10 text-white border-white/20' : 'dark:bg-[#182820] dark:text-[#7bb173] dark:border-[#2d473a]'}
           >
             {badge}
           </Badge>
@@ -43,7 +43,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       <h2
         className={cn(
           'text-3xl sm:text-4xl lg:text-5xl font-serif font-bold tracking-tight mb-4 leading-tight',
-          isDark ? 'text-white' : 'text-[#245240]',
+          isDark ? 'text-white' : 'text-[#245240] dark:text-white',
         )}
       >
         {title}
@@ -52,7 +52,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         <p
           className={cn(
             'text-base sm:text-lg leading-relaxed',
-            isDark ? 'text-[#e2e7e4]' : 'text-[#4a5751]',
+            isDark ? 'text-[#e2e7e4]' : 'text-[#4a5751] dark:text-[#a8b8b0]',
           )}
         >
           {subtitle}
