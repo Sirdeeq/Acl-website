@@ -54,6 +54,7 @@ export const COMPANY_PROFILE = {
     role: 'Founder and Executive Creator',
     origin: 'Igbemo Ekiti, Ekiti State, Nigeria',
     honorificTitle: 'Crowned Princess from Igbemo Ekiti',
+    imageSrc: '/images/adesewa.png',
     bio: [
       'Princess Adesola Debbie Daramola is a crowned princess from Igbemo Ekiti, a town in Ekiti State, Nigeria, renowned for its distinctive, nutritious rice. She is the founder of ADESEWA Concept Ltd (ACL), President of Agribusiness and Value Chain at WEFA Nigeria and a Non-Executive Director at Cubeseed Africa.',
       'She is an agribusiness, value-chain and inclusive-livelihood leader with more than two decades of experience across entrepreneurship, corporate communications, client relationship management, humanitarian programming and community development.',

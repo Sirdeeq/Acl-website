@@ -24,6 +24,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 import { COMPANY_PROFILE } from '@/content/company.content'
 import { SERVICES_LIST } from '@/content/services.content'
 import { AAIRI_PROGRAMME, AVC_COMMUNITY } from '@/content/programmes.content'
+import { STRATEGIC_PARTNERS } from '@/content/partners.content'
 import { NIGERIAN_STATES_NETWORK, INTERNATIONAL_REACH_COUNTRIES } from '@/data/states'
 import { AairiEnquiryModal } from '@/features/programmes/AairiEnquiryModal'
 
@@ -178,7 +179,7 @@ export const HomePage: React.FC = () => {
                 <div className="p-2.5 rounded-xl bg-[#e8f1ec] dark:bg-[#1c2c23] text-[#245240] dark:text-[#7bb173]">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <span className="text-3xl font-serif font-bold text-[#245240] dark:text-white">18</span>
+                <span className="text-3xl font-serif font-bold text-[#245240] dark:text-white">19</span>
               </div>
               <h4 className="text-sm font-semibold text-[#141716] dark:text-[#e4ebe7]">Nigerian States</h4>
               <p className="text-xs text-[#4a5751] dark:text-[#94a89e] mt-1">Dedicated State Coordinator network.</p>
@@ -578,52 +579,45 @@ export const HomePage: React.FC = () => {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5">
-              <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#245240] via-[#1b4332] to-[#143628] text-white shadow-xl border-4 border-white dark:border-[#22332b] p-8 sm:p-10">
-                {/* Background decorative brand petal */}
-                <div className="absolute top-0 right-0 w-48 h-48 opacity-10 pointer-events-none">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-[#22332b] bg-[#143628] group">
+                {/* Official Portrait of Princess Adesola Debbie Daramola */}
+                <div className="aspect-[4/5] sm:aspect-[3/4] relative overflow-hidden bg-[#245240]">
                   <img
-                    src="/branding/logo-icon.png"
-                    alt=""
-                    className="w-full h-full object-contain filter invert"
+                    src="/images/adesewa.png"
+                    alt={COMPANY_PROFILE.leadership.name}
+                    className="w-full h-full object-cover object-top group-hover:scale-102 transition-transform duration-700"
                   />
-                </div>
+                  {/* Gradient vignette at bottom */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0e1411] via-[#0e1411]/50 to-transparent" />
 
-                <div className="relative z-10 space-y-6">
-                  {/* Regal Crown / Executive Insignia */}
-                  <div className="flex items-center justify-between border-b border-white/10 pb-5">
-                    <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-[#7bb173]">
-                      <Crown className="w-7 h-7 text-[#7bb173]" />
+                  {/* Regal Badge Floating Top Right */}
+                  <div className="absolute top-4 right-4 z-10">
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-semibold shadow-md">
+                      <Crown className="w-3.5 h-3.5 text-[#facc15]" />
+                      <span>Crowned Princess</span>
                     </div>
-                    <Badge variant="green" size="sm" className="bg-[#359540]/30 text-[#bbdecc] border-[#359540]/40">
-                      Crowned Princess
-                    </Badge>
                   </div>
 
-                  <div>
-                    <span className="text-xs font-semibold uppercase tracking-wider text-[#7bb173] block mb-1">
+                  {/* Identification and Appointments Overlay */}
+                  <div className="absolute bottom-0 inset-x-0 p-6 sm:p-8 text-white space-y-2 z-10">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#7bb173] block">
                       Founder & Executive Creator
                     </span>
-                    <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white leading-snug">
+                    <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white leading-tight">
                       {COMPANY_PROFILE.leadership.name}
                     </h3>
-                    <p className="text-xs text-[#bbdecc] mt-1">
+                    <p className="text-xs text-[#bbdecc]">
                       {COMPANY_PROFILE.leadership.origin}
                     </p>
-                  </div>
 
-                  {/* Leadership Mandates */}
-                  <div className="space-y-3 pt-2 text-xs text-[#e2e7e4]">
-                    <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                      <span className="text-[#7bb173] font-semibold block">WEFA Nigeria</span>
-                      <span className="text-white">President of Agribusiness and Value Chain</span>
-                    </div>
-                    <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                      <span className="text-[#7bb173] font-semibold block">Cubeseed Africa</span>
-                      <span className="text-white">Non-Executive Director</span>
-                    </div>
-                    <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                      <span className="text-[#7bb173] font-semibold block">Enterprise Leadership</span>
-                      <span className="text-white">Over 20 Years Across Agribusiness & Humanitarian Initiatives</span>
+                    {/* Mandates Mini-badges */}
+                    <div className="flex flex-wrap gap-2 pt-2">
+                      <span className="text-[11px] px-2.5 py-1 rounded-lg bg-white/10 backdrop-blur-xs border border-white/15 text-[#e2e7e4]">
+                        President, Agribusiness at WEFA Nigeria
+                      </span>
+                      <span className="text-[11px] px-2.5 py-1 rounded-lg bg-white/10 backdrop-blur-xs border border-white/15 text-[#e2e7e4]">
+                        Non-Exec Director, Cubeseed Africa
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -653,7 +647,77 @@ export const HomePage: React.FC = () => {
         </Container>
       </section>
 
-      {/* 9. PARTNERSHIP OPPORTUNITIES (WITH PHOTOGRAPHY) */}
+      {/* 9. STRATEGIC PARTNERS & ECOSYSTEM SHOWCASE */}
+      <section className="py-20 sm:py-28 bg-[#f0f3f1] dark:bg-[#0e1411] transition-colors duration-300">
+        <Container>
+          <SectionHeading
+            badge="Strategic Alliances"
+            title="Strategic Partners & Global Ecosystem"
+            subtitle="Adesewa Concept Ltd collaborates with institutional bodies, transatlantic trade councils, and enterprise technology innovators to build resilient African agribusiness value chains."
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 mb-12">
+            {STRATEGIC_PARTNERS.map((partner) => (
+              <div
+                key={partner.id}
+                className="bg-white dark:bg-[#141d18] rounded-3xl p-6 sm:p-8 border border-[#dce3df] dark:border-[#22332b] shadow-xs flex flex-col justify-between transition-all hover:border-[#359540]/60 hover:shadow-md"
+              >
+                <div>
+                  {/* Clean white badge for logo to ensure high contrast across Dark, Dark Grey, and Light */}
+                  <div className="bg-white rounded-2xl p-4 sm:p-5 border border-[#e5ebe7] dark:border-white/10 shadow-xs h-32 flex items-center justify-center mb-6 overflow-hidden">
+                    <img
+                      src={partner.logo}
+                      alt={`${partner.name} logo`}
+                      className="max-h-20 max-w-full object-contain"
+                    />
+                  </div>
+
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="text-[11px] font-semibold uppercase tracking-wider text-[#359540] dark:text-[#4ade80]">
+                      {partner.role}
+                    </span>
+                    {partner.regOrLocation && (
+                      <span className="text-[10px] px-2 py-0.5 rounded-md bg-[#e8ecea] dark:bg-[#1c2c22] text-[#4a5751] dark:text-[#9bb0a4] font-mono">
+                        {partner.regOrLocation}
+                      </span>
+                    )}
+                  </div>
+
+                  <h3 className="text-xl font-serif font-bold text-[#245240] dark:text-white mb-3">
+                    {partner.name}
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed mb-6">
+                    {partner.description}
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-[#dce3df] dark:border-[#22332b]">
+                  <span className="text-[11px] font-semibold uppercase tracking-wider text-[#7bb173] block mb-2.5">
+                    Collaboration Focus
+                  </span>
+                  <ul className="space-y-2 text-xs text-[#245240] dark:text-[#e4ebe7]">
+                    {partner.highlights.map((h, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#359540] dark:text-[#4ade80] shrink-0 mt-0.5" />
+                        <span>{h}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button href="/partners" variant="outline" size="md" rightIcon={<ArrowRight className="w-4 h-4" />}>
+              Explore Full Partnership Framework
+            </Button>
+          </div>
+        </Container>
+      </section>
+
+      {/* 10. PARTNERSHIP OPPORTUNITIES (WITH PHOTOGRAPHY) */}
       <section className="py-20 sm:py-28 bg-[#e8ecea] dark:bg-[#101713] transition-colors duration-300">
         <Container>
           <div className="bg-[#e2ebe6] dark:bg-[#14231b] rounded-3xl p-8 sm:p-14 border border-[#bbdecc]/70 dark:border-[#22392c]">

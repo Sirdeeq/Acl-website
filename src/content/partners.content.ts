@@ -1,3 +1,66 @@
+export interface StrategicPartner {
+  id: string
+  name: string
+  fullName: string
+  role: string
+  category: 'Technology' | 'Institutional' | 'International Trade'
+  logo: string
+  regOrLocation?: string
+  description: string
+  highlights: string[]
+}
+
+export const STRATEGIC_PARTNERS: StrategicPartner[] = [
+  {
+    id: 'brainstorm-it',
+    name: 'Brainstorm IT Solutions',
+    fullName: 'Brainstorm IT Solutions Ltd',
+    role: 'Technology & Digital Infrastructure Partner',
+    category: 'Technology',
+    logo: '/branding/partners/brainstorm-it-solutions.png',
+    regOrLocation: 'RC 827030',
+    description:
+      'Brainstorm IT Solutions serves as the core technology and digital systems partner for Adesewa Concept Ltd, engineering the enterprise web architecture, secure digital registries, and platform solutions powering the AVC agribusiness ecosystem.',
+    highlights: [
+      'Digital infrastructure & platform engineering',
+      'Agribusiness database and member registry architecture',
+      'Secure enterprise technology deployment',
+    ],
+  },
+  {
+    id: 'commonwealth-pennsylvania',
+    name: 'Commonwealth of Pennsylvania',
+    fullName: 'Commonwealth of Pennsylvania, USA',
+    role: 'Institutional & Bilateral Trade Partner',
+    category: 'Institutional',
+    logo: '/branding/partners/commonwealth-of-pennsylvania.jpg',
+    regOrLocation: 'United States of America',
+    description:
+      'The Commonwealth of Pennsylvania collaborates with Adesewa Concept Ltd to advance transatlantic agricultural trade relationships, institutional linkages, and cross-border commercial opportunities connecting Pennsylvania and African agribusinesses.',
+    highlights: [
+      'Transatlantic agricultural trade dialogue & linkages',
+      'Institutional economic development cooperation',
+      'Cross-border commercial engagement and market access',
+    ],
+  },
+  {
+    id: 'acbc',
+    name: 'African & Caribbean Business Council',
+    fullName: 'African & Caribbean Business Council (ACBC)',
+    role: 'International Trade & Diaspora Economic Council',
+    category: 'International Trade',
+    logo: '/branding/partners/african-caribbean-business-council.jpg',
+    regOrLocation: 'Greater Philadelphia & International',
+    description:
+      'The African & Caribbean Business Council facilitates commercial bridges, trade missions, export development, and bilateral investment channels between African agribusiness leaders and the international diaspora business community.',
+    highlights: [
+      'International trade missions and export development',
+      'Bilateral commercial networks & investment forums',
+      'Diaspora capital mobilization for agricultural value chains',
+    ],
+  },
+]
+
 export const PARTNERS_CONTENT = {
   headline: 'Strategic Collaboration for Inclusive African Agribusiness Growth',
   subheadline:

@@ -199,17 +199,22 @@ export const AboutPage: React.FC = () => {
             {/* Profile Content Container */}
             <div className="bg-white dark:bg-[#141d18] rounded-3xl p-8 sm:p-12 border border-[#dce3df] dark:border-[#22332b] shadow-xs space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center border-b border-[#dce3df] dark:border-[#22332b] pb-8">
-                {/* Executive Insignia Card */}
-                <div className="md:col-span-4 rounded-2xl overflow-hidden bg-gradient-to-br from-[#245240] to-[#143628] text-white p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-md border-2 border-white/20 min-h-[220px]">
-                  <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-[#7bb173] mb-3">
-                    <Crown className="w-8 h-8 text-[#7bb173]" />
+                {/* Official Leadership Portrait */}
+                <div className="md:col-span-4 relative rounded-2xl overflow-hidden shadow-md border-2 border-white dark:border-[#24362c] aspect-[3/4] bg-[#245240] group">
+                  <img
+                    src="/images/adesewa.png"
+                    alt={COMPANY_PROFILE.leadership.name}
+                    className="w-full h-full object-cover object-top group-hover:scale-102 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-4 text-white">
+                    <div className="flex items-center gap-1 text-[#facc15] text-[11px] font-semibold uppercase tracking-wider mb-0.5">
+                      <Crown className="w-3 h-3 text-[#facc15]" />
+                      <span>Crowned Princess</span>
+                    </div>
+                    <span className="text-xs font-serif font-bold text-white">
+                      Igbemo Ekiti, Nigeria
+                    </span>
                   </div>
-                  <span className="text-[11px] font-semibold uppercase tracking-wider text-[#7bb173] block mb-1">
-                    Crowned Princess
-                  </span>
-                  <span className="text-xs text-[#bbdecc]">
-                    Igbemo Ekiti, Ekiti State
-                  </span>
                 </div>
 
                 <div className="md:col-span-8 space-y-3">

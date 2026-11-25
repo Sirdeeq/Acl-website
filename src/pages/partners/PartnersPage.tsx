@@ -11,7 +11,7 @@ import { Container } from '@/components/ui/Container'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { SectionHeading } from '@/components/ui/SectionHeading'
-import { PARTNERS_CONTENT } from '@/content/partners.content'
+import { PARTNERS_CONTENT, STRATEGIC_PARTNERS } from '@/content/partners.content'
 
 export const PartnersPage: React.FC = () => {
   const iconMap: Record<string, React.ReactNode> = {
@@ -44,6 +44,70 @@ export const PartnersPage: React.FC = () => {
                 Initiate Partnership Discussion
               </Button>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Strategic Partners & Global Ecosystem */}
+      <section className="py-16 sm:py-24 bg-[#f0f3f1] dark:bg-[#0e1411] transition-colors border-b border-[#dce3df] dark:border-[#1d2923]">
+        <Container>
+          <SectionHeading
+            badge="Strategic Alliances"
+            title="Strategic Partners & Global Ecosystem"
+            subtitle="Adesewa Concept Ltd collaborates with accredited government institutions, international trade councils, and technology leaders to build resilient African agribusiness value chains."
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            {STRATEGIC_PARTNERS.map((partner) => (
+              <div
+                key={partner.id}
+                className="bg-white dark:bg-[#141d18] rounded-3xl p-6 sm:p-8 border border-[#dce3df] dark:border-[#22332b] shadow-xs flex flex-col justify-between transition-all hover:border-[#359540]/60 hover:shadow-md"
+              >
+                <div>
+                  {/* Clean white badge for logo to ensure optimal contrast across Dark, Dark Grey, and Light themes */}
+                  <div className="bg-white rounded-2xl p-4 sm:p-5 border border-[#e5ebe7] dark:border-white/10 shadow-xs h-32 flex items-center justify-center mb-6 overflow-hidden">
+                    <img
+                      src={partner.logo}
+                      alt={`${partner.name} logo`}
+                      className="max-h-20 max-w-full object-contain"
+                    />
+                  </div>
+
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="text-[11px] font-semibold uppercase tracking-wider text-[#359540] dark:text-[#4ade80]">
+                      {partner.role}
+                    </span>
+                    {partner.regOrLocation && (
+                      <span className="text-[10px] px-2 py-0.5 rounded-md bg-[#e8ecea] dark:bg-[#1c2c22] text-[#4a5751] dark:text-[#9bb0a4] font-mono">
+                        {partner.regOrLocation}
+                      </span>
+                    )}
+                  </div>
+
+                  <h3 className="text-xl font-serif font-bold text-[#245240] dark:text-white mb-3">
+                    {partner.name}
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-[#4a5751] dark:text-[#a8b8b0] leading-relaxed mb-6">
+                    {partner.description}
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-[#dce3df] dark:border-[#22332b]">
+                  <span className="text-[11px] font-semibold uppercase tracking-wider text-[#7bb173] block mb-2.5">
+                    Collaboration Focus
+                  </span>
+                  <ul className="space-y-2 text-xs text-[#245240] dark:text-[#e4ebe7]">
+                    {partner.highlights.map((h, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#359540] dark:text-[#4ade80] shrink-0 mt-0.5" />
+                        <span>{h}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
